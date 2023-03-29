@@ -1,4 +1,40 @@
+img, video{
+    max-width: 100%;
+}
+figure{
+    margin: 0;
+}
+.container{
+    margin: 0 auto;
+    width: 600px;
+}
+
+#main-header{
+    text-align: center;
+}
+
+#logo-area{
+    width: 200px;
+    margin: auto;
+    
+}
 #Subtitle-area{
-    background-color: yellowgreen;
-    border-top: 1px solid orange;
+    background-color: rgb(241, 241, 194);
+    border-top: 1px orange solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#bottom-title{
+    color: red;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+#borded-link{
+    line-height: 1em;
+}
+.bordo{
+    border-color: aqua;
+}
+.ul-list li{
+    margin-bottom: 10px;
 }
