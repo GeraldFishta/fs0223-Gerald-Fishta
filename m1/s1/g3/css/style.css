@@ -9,3 +9,8 @@ div {
 .sfondo-verde{
     background-color: green;
 }
+
+
+.area-speciale > span{
+    font-style: italic;
+} 
