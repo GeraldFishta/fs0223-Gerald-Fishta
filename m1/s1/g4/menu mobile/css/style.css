@@ -1,0 +1,40 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#q2{
+    overflow: auto;
+}
+
+#q3{
+    background-color: red;
+    max-width: 600px;
+    height: 50px;
+}
+#q4{
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#q5{
+    padding: 15px;
+    background-color: gray;
+    border: 10px outset rgb(53, 47, 47);
+}
+#q5:active{
+    background-color: blue;
+    border: 10px inset #999; 
+}
+
+#q6{
+    border-radius: 100%;
+    border-top-left-radius: 60%;
+    border: 2px solid #0000;
+    border-top: none;
+}
