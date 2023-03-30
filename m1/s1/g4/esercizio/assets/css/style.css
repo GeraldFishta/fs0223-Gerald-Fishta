@@ -1,12 +1,69 @@
 /* IMPOSTAZIONI GENERALI */
 
+img, video{
+    max-width: 100%;
+}
+figure{
+    margin: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    background-image: url(../img/sfondo.png) ;
+    text-align: center;
+}
+
 /* HEADER */
+
+#blucontainer{
+    background-color: rgba(7, 7, 218, 0.993);
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.title{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 12px;
+}
+
+#logo{
+    text-align: center;
+    
+}
 
 /* MAIN */
 
+.main-section{
+    background-image:url(../img/sfondo.png) ;
+    width: 80%;
+
+}
+.whitesection{
+    background-color: white;
+    width: 80%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+
+}
+
 /* ELEMENTI NEL MAIN - ARTICLE */
+.title2{
+    text-transform: capitalize;
+    font-size: larger;
+    font-weight: bold;
+}
+#
 
 /* TABELLE */
+
+#table{
+    text-align: center;
+}
 
 /* FORM */
 
