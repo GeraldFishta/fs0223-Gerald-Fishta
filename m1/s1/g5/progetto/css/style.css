@@ -1,5 +1,5 @@
 /* Your styles here */
-html
+
 
 *{box-sizing: border-box;}
 
@@ -11,7 +11,9 @@ body {
     padding: 15px;
     text-align: center;
 }
-hr {display: none;}
+hr {color: white;
+    width: 300px;
+}
 
 header {
     background-color: black;
@@ -64,6 +66,10 @@ body > main > figure > img {border-radius: 100%;}
     height: 8rem;
     padding: 0;
 }
+#orangesection > h2{
+    font-weight: bold;
+    font-size: larger;
+}
 
 
 
@@ -84,7 +90,7 @@ h3{
 
 section{
     margin-bottom: 1em;
-    margin-top: 2em;
+    margin-top: 1em;
    
 }
 
@@ -92,14 +98,15 @@ footer{
     background-color: #25a2c3;
     text-align: center;
     color: white;
-
+    
 }
 body > main > footer > ul {
     list-style: none;
 }
 body  main  aside  section{
     border: 1px solid #dee1e3;
-    padding: 30px 20px;
+    width: 100%;
+
 
 }
 body > main > aside > section:nth-child(1){
@@ -148,4 +155,15 @@ body > article > div:nth-child(2) > button{
     padding: 20px;
 
 }
-
+body > main > footer > ul > li:nth-child(1) > a{
+    color: white;
+}
+body > main > footer > ul > li:nth-child(2) > a{
+    color: white;
+}
+body > main > footer > ul > li:nth-child(3) > a{
+    color: white;
+}
+body > main > footer > p > span{
+    text-decoration: underline;
+}
