@@ -21,6 +21,7 @@ figure{
     padding: 20px;
     width: 80%;
     margin: auto;
+
 }
 
 .title{
@@ -41,6 +42,7 @@ figure{
     background-image:url(../img/sfondo.png) ;
     width: 80%;
     font-family:'Poppins', sans-serif;
+    line-height: 1.4em;
 
 }
 .whitesection{
@@ -58,16 +60,26 @@ figure{
     font-size: larger;
     font-weight: bold;
 }
-#
+
 
 /* TABELLE */
 
-#table{
+
+.table{
     text-align: center;
+    margin: auto;
 }
 
 /* FORM */
 
 /* ELEMENTI NELL' ASIDE */
+
+#aside.boxsection{
+    background-color: gray;
+    margin: auto;
+    width: 80%;
+    padding: 2px;
+
+}
 
 /* FOOTER */
