@@ -42,7 +42,7 @@ article{
 
 body > article > div.corso{
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -104,18 +104,19 @@ body  main  aside  section{
 }
 body > main > aside > section:nth-child(1){
     width: 380px;
-    margin: auto;
+    margin: 10px auto;
     display: inline-block;
+    margin-top: 15px;
 }
 body > main > aside > section:nth-child(2){
     width: 380px;
-    margin: auto;
+    margin: 10px auto;
     display: inline-block;
 
 }
 body > main > aside > section:nth-child(3){
     width: 380px;
-    margin: auto;
+    margin: 10px auto;
     display: inline-block;
 }
 body > main > footer > ul > li:nth-child(1) > i{
@@ -134,13 +135,17 @@ body > main > footer > h2{
 body > main > footer > p{
     margin-top: 20px;
 }
-body > article > div.orangediv{
+
+body > article > div:nth-child(2) > button{
     padding-inline: 20px;
     width: fit-content;
     background-color: #f04c2f;
-    margin: auto;
+    margin:12em auto;
     font-family: 'Montserrat';
     font-weight: bold;
     color: white;
     border-radius: 10%;
+    padding: 20px;
+
 }
+
