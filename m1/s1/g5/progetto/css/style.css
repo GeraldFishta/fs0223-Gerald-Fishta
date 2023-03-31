@@ -135,6 +135,12 @@ body > main > footer > p{
     margin-top: 20px;
 }
 body > article > div.orangediv{
-    padding-block: 20px;
-    padding-inline: ;
+    padding-inline: 20px;
+    width: fit-content;
+    background-color: #f04c2f;
+    margin: auto;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: white;
+    border-radius: 10%;
 }
