@@ -1,5 +1,5 @@
 /* Your styles here */
-html{font-size: 62.5%;}
+html
 
 *{box-sizing: border-box;}
 
@@ -18,6 +18,7 @@ header {
     text-align: center;
     margin-bottom: 0;
     padding: 3em 2em;
+    width: 100%;
 }
 header div img {
     margin-bottom: 20px;
@@ -36,10 +37,24 @@ article{
     overflow: hidden;
     margin-bottom: 1em;
 }
-.corso{ 
-    padding: 200px;
+
+
+
+body > article > div.corso{
+    text-align: center;
 
 }
+
+body > main > figure > img {border-radius: 100%;}
+
+#orangesection{
+    background-color: #e22d0e;
+    color: white;
+    width: 100%;
+    height: 8rem;
+    padding: 0;
+}
+
 
 
 
@@ -61,4 +76,13 @@ section{
     margin-bottom: 1em;
     margin-top: 2em;
    
+}
+
+footer{
+    background-color: #25a2c3;
+    text-align: center;
+
+}
+ol footer{
+    list-style: none;
 }
