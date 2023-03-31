@@ -101,3 +101,19 @@ body  main  aside  section{
     padding: 30px 20px;
 
 }
+body > main > aside > section:nth-child(1){
+    width: 380px;
+    margin: auto;
+    display: inline-block;
+}
+body > main > aside > section:nth-child(2){
+    width: 380px;
+    margin: auto;
+    display: inline-block;
+
+}
+body > main > aside > section:nth-child(3){
+    width: 380px;
+    margin: auto;
+    display: inline-block;
+}
