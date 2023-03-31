@@ -91,6 +91,7 @@ section{
 footer{
     background-color: #25a2c3;
     text-align: center;
+    color: white;
 
 }
 body > main > footer > ul {
@@ -116,4 +117,24 @@ body > main > aside > section:nth-child(3){
     width: 380px;
     margin: auto;
     display: inline-block;
+}
+body > main > footer > ul > li:nth-child(1) > i{
+    color: white;
+}
+body > main > footer > ul > li:nth-child(2) > i{
+    color: white;
+}
+body > main > footer > ul > li:nth-child(3) > i{
+    color: white;
+}
+body > main > footer > h2{
+    font-size: 2em;
+    font-weight: bold;
+}
+body > main > footer > p{
+    margin-top: 20px;
+}
+body > article > div.orangediv{
+    padding-block: 20px;
+    padding-inline: ;
 }
