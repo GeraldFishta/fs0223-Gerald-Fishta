@@ -1,6 +1,6 @@
 var test = prompt ("Miglior Final Fantasy a cui hai giocato, scriverlo in numeri romani ovviamente");
 
-if( test=="FFVII"){
+if( test=="FFVII" || test=="FFVII"){
     document.write("Ben detto!");
 }else if(test=="FFIX"){
     document.write("quasi, ma sai che sono VII e VIII");
