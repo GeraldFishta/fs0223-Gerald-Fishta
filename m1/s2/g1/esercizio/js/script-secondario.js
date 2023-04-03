@@ -14,3 +14,7 @@ function risultatiForm (Test){
     var inputValue = formTest.inputbox.value;
     alert ("hai scritto" + inputValue);
 }
+
+//svolgimento del form, !!!in corso!!!
+
+var form = document.getElementById('subscribe');  
