@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //oggetto e una serie di valori (cmpresi dentro le graffe)
+        let obj = {};
+
+        let pizza = {
+            gusto : "margherita",
+            prezzo : 5,
+           //METODO: funzione all interno di un oggeto
+            mostraPrezzo : function(){
+                console.log("la pizza margherita costa 5 euro");
+        }  
+
+    };
+    //lettura della proprieta
+    console.log(pizza.gusto);
+    console.log(pizza.prezzo);
+    
+    //scrittura di una proprieta
+    pizza.prezzo = 4;
+    
+    document.write(pizza.prezzo);
+    console.log(pizza);
+    </script>
+
+    
+</body>
+</html>

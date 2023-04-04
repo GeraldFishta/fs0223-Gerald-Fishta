@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //in questo caso stiamo cercando di creare una comaprazione,
+        //che mi dara un valore booleano, ovvero TRUE or FALSE.
+        let anni = 30;
+        console.log(anni < 50 );//true
+        console.log(anni > 25);//false
+        console.log(anni >= 30);//true perche 30 uguale o maggiore di 30
+        console.log(anni <= 30);//true perche 30 uguale o maggiore di 30
+        console.log(anni == 30);//true, uguaglianza piena.
+        console.log(anni != 30)//false, esprime diversita
+        
+        console.log(anni == "30");//true perche valore uguale anche se tipo diverso
+        console.log(anni === "30");//false perche valore uguale ma tipo diverso, e abbiamo usato uguaglianza stretta
+
+        //operatori logici
+
+        //AND &&
+        console.log(anni >= 18 && anni <=120);// se usiamo AND allora entrambi gli operatori dovranno coincidere
+        console.log(anni >= 32 && anni <=120);
+
+        //OR ||
+        let email = "info@esempio.com";
+        let username = "info";
+        console.log(email == "info@esempio.com" || username =="info" );//true, almeno uno dei due valori e uguale al valore del let
+        console.log(email == "blabla.com" || username =="Mario" );//false, nessuno dei due valori coincide con i let, ne basterebbe uno per il TRUE
+
+        //NOT != 
+        //utilizzo le parentesi per far si che l operazione al loro interno venga eseguita
+        //prima che l'operatore NOT abbia effetto
+        console.log( !(email == "info@esempio.it") );
+
+        console.log(typeof email); //chiedo alla console che tipo di dato e mail
+
+        let dato=[];
+        console.log(Array.isArray(dato)); //verifico se il dato e un array
+        console.log(!Array.isArray(dato)); //verifico se il dato NON e un array
+        
+
+        </script>
+
+</body>
+</html>
