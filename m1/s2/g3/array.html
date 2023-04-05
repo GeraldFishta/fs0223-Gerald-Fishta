@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //Array: lista di valori in serie, non coppie di chiavi-valore 
+         let arrVuoto = [];
+
+                //i numeri dentro le [] verrano conteggiati cosi da [0 primo valora,1 secondo,2 terzo etc,]
+        let numeri = [0,"2",3,4,7]
+       
+        //a differenza del object l array puo essere tarscritto con 
+        //document.write
+        document.write(numeri);
+        console.log(numeri);
+
+        let pizze = [
+            "Margherita",
+            "Diavola",
+            "Marinara"
+        ]
+
+        //lettura (a sinistra delle quadre ce sempre un array)
+        console.log(pizze[1]);
+        //scrittura
+        pizze[2] = "Mimosa";
+        console.log(pizze);
+        
+        //attenzione a non creare buchi
+        pizze[5] = "Boscaiola"; //creera il valore numero 5, ma mancheranno 3 e 4
+        console.log(pizze)
+        //per evitare la creazione di buchi in un array con metodo If
+        if(pizze[4] != undefined){
+            pizze[4]= "Boscaiola";
+            console.log(pizze);
+        }
+    
+        //Aggiungere alla fine di un array
+        //metodo da preferire Push (Push, e un metodo specifico degli array per inserire nuovi valori in un array)
+        pizze.push("Boscaiola", "Napoli");
+        console.log(pizze);
+
+        //aggiungere all'inizio
+        pizze.unshift("Norcina");
+        console.log(pizze);
+
+        //rimuovere dall'inizio
+        pizze.shift();
+        console.log(pizze);
+
+        //Rimuovere alla fine di un array
+        pizze.pop();
+        console.log(pizze);
+
+        //aggiungere in un object
+        let me = "io";
+        me.prop();
+
+        //leggere la lunghezza degli array ( e delle stringhe)
+        // stringaoarray.leght
+        console.log(pizze.length);
+        let stringa = "Normalize Pizza mimona";
+        console.log(stringa.length);//numero caratteri in stringa compreso di spazi
+        
+        //lettura dell'ultimo elemento dell array
+        console.log( pizze[pizze.lenght - 1])
+    
+        //array multidimensionali
+        let arr= [
+            1,
+            2,
+            50,
+            ["a","b","c",[
+                {
+                    p1 : "hello world"
+
+                },
+                {
+                    p1 : "ciao mondo"
+                }
+                ]
+            ]
+        ]
+        console.log(arr[2]);
+        console.log(arr[3][1]);
+        console.log(arr[3][3][1].p1);
+
+
+        //MAI fare per aggiungere
+
+        let arraySbagliato = []
+        arraySbagliato["gusto"] = "margherita";
+        arraySbagliato["prezzo"] = 5;
+        console.log(arraySbagliato);
+        console.log(arraySbagliato.gusto);
+
+        //riordinare un array
+        let lettere = ["b", "z","c","g"];
+        lettere.sort(); //riordina in ordine alfabetico
+        lettere.reverse(); //inverte l'ordine attuale
+        console.log(lettere);
+        
+        //per riordinare in ordine numerico e non alfabetioc        
+
+        let num = [1,100,22,101,"b", "z","c","g"];
+        num.sort(function (a,b){
+            return a - b
+            });
+        console.log(num);
+    
+
+        
+
+
+    </script>
+
+</body>
+</html>
