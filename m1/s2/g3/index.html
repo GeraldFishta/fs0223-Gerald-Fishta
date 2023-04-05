@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let objet = new Object(); //vecchio sistema di definiizione, si usa oggi in riferimento ai costruttori
+    let objct = {}; //sistema di definizione di un object migliore
+    
+    //esempio
+
+    
+
+    let pizza = {
+        gusto : "Margherita",
+        prezzo : 5,
+        aggiunte: {
+            doppiaMozzarella: 1,
+            basilico : 0.5},
+            
+            mostraPrezzo : function() {
+                console.log(`il prezzo della pizza ${this.gusto} e pari a ${this.prezzo}euro`);
+            }
+                  
+        }
+        
+    
+
+    {
+
+        //funzione parametrica
+        //costruttore degli oggetti ===) funzione che costruisce un oggetto
+        function Pizza(_gusto, _prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.mostraPrezzo = function() {
+                console.log(`il prezzo della pizza ${this.gusto} e pari a ${this.prezzo}euro`);
+            }
+
+        } 
+
+        //una volta definito il modulo Pizza, con le sue basi, potro costruire ora
+        // le pizze creando le variabili con base Pizza mettendo i valori
+       
+        let margherita = new Pizza("margherita", 5);
+        let diavola = new Pizza("diavola", 3);
+
+        console.log([margherita,diavola ])
+
+        margherita.mostraPrezzo();
+        diavola.mostraPrezzo();
+
+        // _gusto, sara un parametro che definisce la propieta .gusto,
+        // con il this, richiamo le proprieta all interno della funzione .mostraPrezzo
+
+        Pizza.prototype.aggiunte = {
+            doppiaMozzarella: 1,
+            basilico : 0.5
+        }
+
+        //protptype, e' una proprieta che permette aggiunta di una proprieta a tutti gli oggetti della
+        //classe Pizza
+    }
+
+
+
+
+
+
+
+
+
+
+    
+        
+        //this,  
+        
+        //Metodo, proprieta definita tramite funzione
+        // document.getElementById() //questo e un metodo, ovvero un comando che richiama un oggetto 
+        
+     //non accetta ; o = in sintassi
+
+//recpero prezzo del basilico
+console.log(pizza.aggiunte.basilico)
+
+
+//lettura
+console.log(pizza.gusto);
+//scrittura
+pizza.gusto = "4 formaggi"; //in questo modo riassegno la variabile
+console.log(pizza.gusto);
+
+//non posso scrivere un intero oggetto intero nel obj nel dom
+document.write(pizza);
+
+//lancio di un metodo 
+pizza.mostraPrezzo();
+
+
+
+
+</script>
+
+    
+
+
+</body>
+</html>
