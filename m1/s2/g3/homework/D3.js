@@ -78,7 +78,7 @@ let q = 25
 let w = 13
 let e = 31
 let totalShoppingCart = q + w + e
-let discount = ((totalShoppingCart*80)%100)
+let discount = ((totalShoppingCart)*0.8)
 if(discount > 50){
  console.log(discount)
 }else{
@@ -141,6 +141,16 @@ if(h%2==0){
       console.log("Uguale a 10 o maggiore");
     }
 */
+
+let val = 7
+if (!(val < 10) ){
+  console.log("val e minore di 10")
+}else if (!val < 5) {
+  console.log("val e minore di 5")
+}else{
+  console.log("val uguale a 10 o maggiore")
+}
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
