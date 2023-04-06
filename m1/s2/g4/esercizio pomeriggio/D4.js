@@ -181,10 +181,10 @@ for(p in starWarsCharacters){
 let massa = 0;
 let i = 0;
 while(i < starWarsCharacters.length){
-  massa += starWarsCharacters[i].mass;
+  massa += parseInt(starWarsCharacters[i].mass);
   i++;
-}
-//scomodissimo il while qui!
+} 
+console.log(massa)
 
 /* ESERCIZIO 7     
 
