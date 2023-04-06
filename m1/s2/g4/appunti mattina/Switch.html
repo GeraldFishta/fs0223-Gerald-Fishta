@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    
+<select onchange="mostraPrezzo(this)">
+    <option value="">--seleziona--</option>
+    <option value="Kiwy">Kiwi</option>
+    <option value="Mela">Mela</option>
+    <option value="Pera">Pera</option>
+    <option value="Mango">Mango</option>
+    <option value="Papaya">Papaya</option>
+</select>
+
+<div id="prezzo"></div>
+
+    <script>
+
+
+        function prova(a){
+            console.log(a)
+        }
+
+        function mostraPrezzo(select) {
+
+            let prezzo = document.getElementById("prezzo")
+            let frutto = select.value;
+            let risultato;
+
+        switch(frutto){
+            case "Mela":
+                risultato = `la mela costa 0.5`
+                break;
+            case "Pera":
+               risultato =  `pera mela costa 0.5`    
+            case "Mango":
+            case "Papaya": 
+                risultato = `il mango e la papaya mela costa 0.5`
+                break;
+                default:
+                risultato = `non abbiamo ${frutto}`
+          } 
+          prezzo.textContent = risultato;
+
+         }
+
+
+    </script>
+
+
+
+
+</body>
+</html>
