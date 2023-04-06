@@ -191,6 +191,7 @@ console.log(massa)
 Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
 (cerca su un motore di ricerca switch case e conditionals)
 
+
 Se la massa è inferiore a 500 stampa in console: "Ship is under loaded",
 Se la massa è uguale a 500 stampa in console: "Ship is half loaded",
 Se la massa è superiore a 700 stampa in console: "Warning: Load is over 700",
@@ -200,6 +201,18 @@ Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump
 Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
+switch(true){
+  case (massa < 500): console.log("ship is under loaded");
+  break;
+  case(massa == 500): console.log("ship is half loaded");
+  break;
+  case(massa > 700 || massa <= 900): console.log("warning: load is over 700");
+  break;
+  case(massa > 900 <= 1000): console.log("critical load: over 900");
+  break;
+  default : console.log("DANGER!OVERLOAD ALER: jump ship now!")
+
+}
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
