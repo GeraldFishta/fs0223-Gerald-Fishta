@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="testo"></div>
+    
+    <script>
+
+        function scrivi(str){
+            let testo = document.getElementById("testo");
+            testo.innerHTML += str;
+        }
+        scrivi("ciao mondo");
+        scrivi("<br>");
+        scrivi("Hello World");
+
+        //callbacks . Funzione chiamata da un altra funzione 
+
+        function scriviPro(str, fn){                     //funzione dedita a prendere il div e scriverci dentro
+            let testo = document.getElementById("testo");   //predispongo str,e fb come parametri
+            testo.innerHTML += fn(str);                     
+        }
+
+        function grassetto(stringa){         //funzione che prendera un elemento stringa e lo modifica come nel body
+            return `<b>${stringa}</b>`;
+        }
+        
+        function corsivo(stringa){
+            return `<i>${stringa}</i>`;
+        }
+        scriviPro("testo aggiunto", grassetto);  //riguarda la funzione.. str = testo aggiunto, fn = funzione( le variabili assumeranno valori a seconda della loro posizione nel parametro)
+        scriviPro("testo aggiunto", corsivo);     //qui richiamo le funzioni 
+        scriviPro("testo aggiunto in movimento", function(stringa){
+            return `<marquee>${stringa}</marquee>`;
+        });
+
+        //esempio di callback con array.map()
+        let array = [1,2,3,4]
+        
+        //modalita con funzione nominale
+        function raddoppia(n){
+            return n*2
+        }
+        let res1 = array.map(raddoppia)
+        
+
+
+
+
+        //FUNZIONI ANONIME
+
+        let prova = function(){
+            console.log("funziona");
+            }
+        console.log(prova)    //vedo il contenuto della funzione
+        
+        prova();
+
+        //self invoking
+
+        (function(){
+            console.log("funzione autoinvocata");
+        })() //questa funzione si definisce e si invoca allo stesso momento, senza di fatto lasciare traccia di se stessa.
+
+        //Scope delle variabili nelle funzioni
+        let pizze = ["margterita", "diavola"] //scope globale
+        let secondi; //scope globale
+
+        function testScope(){
+            console.log(pizze);//la variabile globale e visibile all interno della funzione
+            
+            let primi = ["pasta al pomodoro", " carbonara"]; //questa variabile e relegata all interno della funzione
+            
+            console.log(primi);//la variabile e raggiungibile 
+            
+            secondi = ["Parmigiana", "pollo arrosto"]
+        }
+       
+        testScope(); 
+
+       
+        //Console.log( primi) mi dara primi is not defined perche viene definito all intenro del blocco di funzione
+       
+        console.log(primi); 
+        
+        console.log(secondi)
+        
+        testScope();
+
+        //funzioni annidate
+
+        function genitore(){
+            let nome = "Mario";
+            function figlio(){
+                console.log(nome);//funziona perche nome e globale rispetto alla funzione figlio
+                let cognome = "Rossi"; //appartiene alla funzione figlio e quindi non puo essere ripresa al di fuori del figlio
+            }
+            figlio();//anche questa funzione esiste solo dentro alla funzione genitore
+        }
+        
+        genitore();
+
+        function a(x){
+            return function b(y){             //scrivendo la keyword return assegno il risultato di return alla variabile precedente.
+                return function c(z){
+                    return x + y + z;
+                }
+            }
+        }
+        console.log( a(3)(3)(2) ); 
+        //scritta in maniera diversa
+        let b = a(3);
+        let c = b(3);
+        console.log(c(2))
+        
+
+    </script>
+</body>
+</html>
