@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        prova() /*le funzioni sono soggette a hoisting,
+         possono essere invocate prima della loro definizione */
+
+        function prova(){                //definziione della funzione
+            console.log("invocata");  
+        }
+        
+        prova(); // funzione invocata
+        console.log(prova)//senza le parentesi tonde rida solo il corpo della funzione
+                            //in pratica con le tonde stai dicendo ( ) = esegui
+    
+        console.log(prova())//undefined, non rida nessun valore
+
+        //return
+        function provaReturn(){
+        return "dato restutuito";
+        }
+        
+        console.log (provaReturn()); //"dato restutuito" in console log 
+
+        //in pratica se una funzione mi rida void se controllo con typescript, e come avere una 
+        //variabile dichiarata ma non definita
+
+        //funzioni parametriche
+
+        function somma(a,b){
+            return a + b;
+        }
+
+        console.log (somma(5,2)); // a = 5, b = 2, allora somma(5,2) = a + b = 7 
+
+        //se volessimo salvare il risultato, lo diamo a una variabile
+        
+        let risultato = somma(5,2);
+        console.log("il risultato della somma e pari a " + risultato)
+        
+        let risultato2 = somma(2)   //omettendo in questo caso il secondo parametro, avro 2 + undefined 
+        console.log(risultato2) //2 + undefined = NaN
+
+        //parametri opzionali 
+        function sommaTripla(a,b,c){
+            if (c === undefined){   //dichiaro che se c non viene definito, gli verra assegnato il valore 0
+                c=0
+            }
+            
+            //Comportamento in caso un parametro non venga definito
+
+            /* versione piu corta   versione corta della dichiarazione sopra
+            if (!c){                 se c non esiste, c = 0
+                c=0
+            }
+            Operatore di Coalescenza  
+            c = c || 0              c e uguale al valore dato, o se no prende 0
+            */
+            
+
+            return a + b + c;
+
+        }
+
+        let risultato3 = sommaTripla(2,2);
+        console.log("il risultato n3 e pari a "+ risultato3)
+
+
+        //e possibile importare valori prefediniti, che verranno usati se in fase di invocazione non viene inserito un valore
+        function sommaTriplaPro(a = 0, b = 0, c = 0){
+            return a + b + c
+        }
+
+        let risultato4 = sommaTriplaPro(2,2) //volutamente omesso il valore di c, il suo valore viene quindi impostato al suo valore default, in quetso caso = 0
+        console.log("il risultato n4 e pari a "+ risultato4);
+
+
+        //funzione con argomenti illimitati 
+        
+        
+        //versione base con for loop
+        function sommaPro(a,...numeri){   // ... significa dentro una () di funzione= prendi tutti i valori e forma un array
+            let risultato = 0;
+            for (i = 0; i < numeri.length; i++){
+               risultato += numeri[i]  
+            }
+            return risultato; 
+            }
+        let risultato5 = sommaPro(4,8,90); //tutti i valori verranno messi nell'array numeri 
+            console.log( " il risultato numero5 e pari a "+ risultato5);
+        
+        /*  For of, versione molto piu semplice
+        
+            for(let n of numeri){
+            risultato +=n;
+            }
+        */
+            
+        //Metodo reduce
+        //metodo ciclico sugli array, ha due parametri (parametro1, parametro2)
+        //p ha un valore di partenza, se non definito sara il primo
+        //dentro a p ci messi p+c, e poi somma p con il valore successivo che diventa il nuovo c
+
+        let arrNumeri = [4,8,90,7,77,5,45]
+        let risultato6 = arrNumeri.reduce(function(p,c){
+            return p + c; 
+        }); console.log(risultato6);
+
+
+
+    </script>
+</body>
+</html>
