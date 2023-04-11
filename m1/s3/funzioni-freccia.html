@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let prova = ()  => {
+            console.log("invocata")
+        }
+
+        /* Posso comunque usare la forma one line
+        let prova = () => console.log("invocata")
+        */
+
+        prova();
+
+        //ancora piu breve
+
+        let provaReturn = () => "dato restuito";
+        console.log>( provaReturn());
+
+        //Funzione freccia e parametri 
+
+        //un solo parametro ( il parametro puo essere messo anche senza le parentesi tonde)
+
+        // let grassetto = stringa => `<b>${stringa}</b>`;
+        let grassetto = (stringa) => {
+            return `<b>${stringa}</b>`;
+        }
+
+        //piu parametri (parentesi tonde obbligatorie)
+        
+        let somma = (a,b) => a+b; //return sottointeso
+        console.log(somma(2,2));
+
+        let array = [1,2,3,4]
+
+        let res2 = array.map(n => n * 2); //[2,4,6,8]
+        console.log(res2)
+    </script>
+
+
+
+
+</body>
+</html>
