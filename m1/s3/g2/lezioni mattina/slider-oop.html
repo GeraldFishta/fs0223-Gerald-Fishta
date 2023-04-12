@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+/*
+VERSIONE CON OGGETTO STATICO
+
+let left = 0;
+
+function next(){
+
+    let slider = document.getElementById('slider-wrap');
+
+    left -= 500;
+
+    console.dir(slider);
+
+    slider.style.marginLeft = left + 'px';
+
+}
+
+
+function prev(){
+
+    let slider = document.getElementById('slider-wrap');
+
+    left += 500;
+
+    slider.style.marginLeft = left + 'px';
+
+}
+*/
+//le istruzioni date sopra possono essere espressere in maniera piu ordinata
+
+
+
+let app = {
+    left: 0,
+    next: function(){
+        let slider = document.getElementById('slider-wrap');
+        this.left -= 500;
+        console.dir(slider);
+        slider.style.marginLeft = this.left + 'px';
+        console.log(this);
+        },
+    prev: function(){
+        let slider = document.getElementById('slider-wrap');
+        this.left +=500;
+        console.dir(slider);
+        slider.style.marginLeft = this.left + 'px';
+
+                }
+
+        }
+        
+        </script>
+    
+    
+
+</body>
+</html>
