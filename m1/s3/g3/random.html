@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        <button id="cambia"></button>
+
+        let rand = Math.floor(Math.random()*10); //creo un numero da 0 a 9 
+
+        console.log(rand)
+
+        //creo una funzione che crea tre valori randomici, li associa a una variabile
+        //a cui da i valori generati, e mi da return della variabile stessa
+
+        function generaColoreRgb(){
+            let r = Math.floor(Math.random()*256) //da 0 a 255
+            let g = Math.floor(Math.random()*256) //da 0 a 255
+            let b = Math.floor(Math.random()*256) //da 0 a 255
+        
+            let colore = `rgb(${r}, ${g}, ${b}) `;
+            
+            return colore    
+        }
+        
+        //creo un bottone che con queryselector prende il div con id #cambia
+        //al bottone associo un addEventListener che al "click" attiva la function()´prendi il body tramite tag
+        //e lo styla nel backgroundcolor con la funzione generalcolorrgb che 
+        //alla fine in return ti da una variabile colore che sara "rgb 1,2,3" con i tre valori randomici generati
+
+        let bottone = document.querySelector('#cambia')
+
+        bottone.addEventListener('click', function(){
+            document.getElementsByTag("body")
+            .style.backgroundColor = generaColoreRgb() 
+        })
+
+    </script>
+
+
+
+</body>
+</html>

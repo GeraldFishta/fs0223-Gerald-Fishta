@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="prova">    <!--Div sara il genitore, poi abbiamo anche un elemento testo secondo .childNodes che mi indica la lista dell albero dei genitori e figli-->
+        <input type="text"><!--ora ho Input, un text-->
+        <span></span><!--ora ho uno Span, seguito da un Text(spazio vuoto fino al prossimo text)-->
+    </div><!--fine del genitore-->
+
+
+    <script>
+
+        let genitore = document.querySelector("#prova");
+        
+        let figlio = genitore.querySelector("input")//tutti gli input dentro all elemento genitore in questo caso, non document
+      
+        console.log(genitore.childNodes);//lista che mostra anche i textNode
+        //textNode 
+      
+        
+        console.log(genitore.firstElementChild);//il primo elemento html del figlio
+        
+        console.log(genitore.firstChild);//il primo elemento testuale del figlio
+        
+        console.log(genitore.lastChild);//l'ultimo elemento html del figlio
+        
+        console.log(genitore.childNodes[1].nextElementSibling);//modo di navigare tra gli elementi dell albero dei nodes
+        
+        let figlioSpan = genitore.querySelector("span");
+        console.log(figlioSpan.parentElement);//l'elemento genitore
+        console.log(figlioSpan.parentNode);//l'elemento genitore
+
+    </script>
+
+
+
+</body>
+</html>

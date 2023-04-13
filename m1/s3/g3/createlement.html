@@ -8,9 +8,39 @@
 </head>
 <body>
     
+    <div id="test"></div>
+
     <script>
 
+        let hmtl = `<div class="">Hello World!</div>`;
 
+        let test = document.querySelector("#test"); //richiamo 
+        
+        test.innerHTML = html
+
+        //vecchio metodo per creare degli elementi nell html direttamente con Js, SCONSIGLIATO!
+       
+        document.write(hmtl); 
+
+        //metodologia giusta!! creo invece di una stringa(doc.write e innerHtml) un oggetto con createElement("che tipo di oggetto")
+        
+        let div = document.createElement("span");//<span></span>
+        //oggetto creato, ma ancora non visualizzato
+        div.textContent = "Elemento creato dinamicamente"
+        //<span>"Elemento creato dinamicamente"</span>
+        div.style.color = "red" 
+        //<span style="color : red">Elemento creato dinamicamente dinamicamente</span>
+
+        console.dir(div)
+
+        //metodi per aggiungere il contenuto dentro un elemento
+       
+        test.appendChild(div);//inserisci alla fine l'elemento (test), inserisci il cosa(div)sarebbe..=> dove.appendChild(cosa)
+
+        //in alternativa ci sono due metodi
+       //se volessi un elemento al centro ad esempio mi creo un div mettendolo al centro e mi aggancio a quello
+        test.append(div); //aggiunge alla fine
+        test.prepend(div)//aggiunge all' inizio
 
     </script>
 
