@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test"></div>
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+    
+    <ul id="menu">
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <script>
+
+    {
+        //funzioni classiche per selezionare nel dom 
+        let test = document.getElementById("test"); //sto salvando il risultato del selettore in una variabile
+
+        console.log(test);
+        console.dir(test); //imparare bene a utilizzarlo per analizzare gli oggetti
+        test.textContent = "Ciao Mondo";
+        test.style.backgroundColor = "red"; //modifico la proprieta background color dello stile inline
+        test.style.backgroundColor = ""; //facendo cosi svuoto il vaolre della proprieta background.color
+
+        let blocchi = document.getElementsByClassName("blocco");  //creo una variabile per salvare il risultato
+        //restituisce un HTMLCollection, che non ha a disposizione molti dei metodi dell'array
+        
+        console.log(blocchi) //in questo caso ottengo un arraya ma non modifiacbile con i metodi dell array, questo perche la funzione getElementsByClassName e vecchia
+
+        blocchi[1].style.backgroundColor = "blue"; //sto selezionando il secondo elemento del blocco 
+
+        for(let el of blocchi){                   // sto usando un ciclo For Of per selezionare tutti gli elementi in blocchi
+            element.style.backgroundColor = "blue";
+        }
+
+        // forEach non funziona, questo perche non e appunto un array classico 
+        blocchi.forEach(function(element){
+            element.style.backgroundColor = "blue"
+        }) 
+        //in questo caso dovremmo usare Array.from(array da estrarre) per estrarre gli elementi dell array creandone uno funzionaleç
+        //uso una funzione freccia giusto per (ovvero tolgo la parola function, parametro => e {azione della funzione freccia, mai return}) 
+        Array.from(blocchi).forEach(element => {
+            element.style.backgroundColor = "blue"
+        })    
+
+        let div = document.getElementByTagName("div")//gli sto dicendo di 
+        //restuirmi un array con tutti i div, specificato dalla funzione getElement..TagName
+        console.log(div);
+
+    }
+
+     
+    //funzioni nuove per selezionare nel dom 
+    {
+        let test = document.querySelector("#test");//mi restituisce sempre un solo elemento
+        test.textContent = "!!!"//dopo aver selezionato tramite query lo cambio
+
+        let blocco1 = document.querySelector(".blocco")//1 solo elemento, il primo che trova se parliamo di una lista
+        
+        blocco1.style.color = "white"//coloro solo il primo
+
+        let blocchi= document.querySelectorAll(".blocco");//Nodelist, mi restituisce tutti gli elementi ordinati in un array classico
+        console.log(blocchi)
+
+        blocchi.forEach(element => element.style.border = "1px solid #000")
+        
+        //esempio di query di css piu articolata
+        let li = document.querySelectorAll("#menu li:not(.scrivi chi no)")
+    
+        li.forEach(el => el.style.backgroundColor = "yellow")
+        
+    }
+
+
+    </script>
+
+
+</body>
+</html>
