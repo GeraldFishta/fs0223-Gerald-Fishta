@@ -270,6 +270,12 @@ function countMovies(){
 /* ESERCIZIO 14
 Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+function onlyTheYears(){
+  let years = [];
+  for (let i = 0 ; i < movies.length ; i++){
+    years.push(movies[i].Year);
+  }return years
+}
 
 
 
@@ -277,22 +283,61 @@ Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli 
 Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+function onlyInLastMillenium(){
+  let millenials = []
+  for (let i = 0 ; i < movies.length; i++ ){
+    if (movies[i].Year > 2000)
+    millenials.push(movies[i])
+  }return millenials
+}
+
 /* ESERCIZIO 16
 Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+function sumAllTheYears(){
+  let total = 0
+  for (let i= 0 ; i < movies.length ; i++){
+    total += parseInt(movies[i].Year)
+  }return total
+}
 
 /* ESERCIZIO 17
 Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+function searchByTitle(str){
+  let searched = []
+  for (i = 0 ; i < movies.length ; i++){
+    if (movies[i].Title.includes(str))
+    searched.push(movies[i])
+  }return searched
+}
 
 /* ESERCIZIO 18
 Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
 "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(str){
+  let match = []
+  let unmatch = []
+  for (i = 0 ; i < movies.length ; i++){
+    if (movies[i].Title.includes(str)){
+      match.push(movies[i])
+    }else{
+      unmatch.push(movies[i])
+    }
+  }return {match, unmatch}
+}
+
 /* ESERCIZIO 19
 Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(n){
+ movies.splice(n, 1) 
+ return movies
+}
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -300,13 +345,28 @@ Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e
 Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function containerSelector(){
+  let container = document.getElementById("container")
+  return container
+}
+
 /* ESERCIZIO 21
 Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+function tdSelector(){
+let td = document.querySelectorAll("td")
+return td
+}
 /* ESERCIZIO 22
 Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+function printer() {
+  let tds = document.querySelectorAll('td');
+  for (let td of tds) {
+    console.log(td.textContent);
+  }
+}
 
 /* ESERCIZIO 23
 Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -474,3 +534,11 @@ const movies = [
 
 console.log(newestMovie(movies))
 console.log(countMovies(movies))
+console.log(onlyTheYears(movies))
+console.log(onlyInLastMillenium(movies)) 
+console.log(sumAllTheYears(movies))
+console.log(searchByTitle("Avengers"))
+console.log(searchAndDivide("Avengers"))
+console.log(movies.length)
+removeIndex(2)
+console.log(movies.length)
