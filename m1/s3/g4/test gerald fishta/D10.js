@@ -355,16 +355,17 @@ Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 function tdSelector(){
 let td = document.querySelectorAll("td")
-return td
+  return td
 }
+
 /* ESERCIZIO 22
 Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
 function printer() {
   let tds = document.querySelectorAll('td');
-  for (let td of tds) {
-    console.log(td.textContent);
+  for (i= 0; i < tds.length; i++) {
+    console.log(tds[i].textContents)
   }
 }
 
@@ -372,17 +373,40 @@ function printer() {
 Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function redBackground(){
+  let everyLink = document.querySelectorAll("a");
+  for (i = 0; i < everyLink.length; i++ ){
+    everyLink[i].style.backgroundColor = "red" }
+}
+
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function newElement(){
+  let myList = document.getElementById("myList")
+  let newElement = document.createElement("li")
+  myList.appendChild(newElement)
+}
 
 /* ESERCIZIO 25
 Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function emptyList(){
+  let myList = document.getElementById("myList")
+  myList.innerHTML = ""
+} 
+
 /* ESERCIZIO 26
 Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addClass(){
+  let trs = document.querySelectorAll("tr")
+  for (i = 0; i < trs.length; i++) {
+    trs[i].classList.add("test")
+  }
+} 
 
 // [EXTRA] JS Avanzato
 
@@ -397,23 +421,54 @@ halfTree(3)
 ***
 
 */
-
+{
+function halfTree(n) {
+  let str = "";
+  for(i = 0; i < n; i++) {
+    str = str.concat("*");
+      console.log(str);
+  }
+}
+halfTree(3);
+}
 /* ESERCIZIO 28
 Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
 Esempio:
-tree(3)
-
-*
-***
-*****
+tree(3)               
+                       
+   *                    
+  ***
+ *****
 
 */
+
+function printTree(h) {
+  let row = '';
+  for (let i = 1; i <= h; i++) {
+     row = ' '.repeat(h - i).concat('*'.repeat(i*2-1));
+   // row += '*'.repeat(i*2-1);
+    console.log(row);
+  }
+}
+
+printTree(3);
+
 
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
+function isItPrime(n) {
+  if (n <= 1) {
+    return false;
+  }for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+}return true;
+}
+console.log(isItPrime(7))
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 const movies = [
