@@ -156,8 +156,6 @@ function whatDayIsIt() {
 
   let dataOggi = new Date()
 
-  let oggi = dataOggi.setDate(dataOggi.getDate())
-
   let indiceGiorno = dataOggi.getDay()
 
   return giorniWeek[indiceGiorno]
@@ -199,9 +197,19 @@ console.log(rollTheDices(4))
 */
 
 function howManyDays(data) {
- let oggi = new Date()
  
+  let oggi = new Date()
+  let anno = oggi.getFullYear()
+  let mese = oggi.getMonth()
+  let giorno  =  oggi.getDay()
+  let time = oggi.getTime()
+  
+  let dataOggi = new Date(anno, mese, giorno, time)
+  let diff = dataOggi.getTime() - data.getTime()
+  return diff
+  
 }
+console.log(howManyDays())
 //tornaci dopo!!!
 
 
