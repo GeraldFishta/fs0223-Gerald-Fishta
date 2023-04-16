@@ -152,15 +152,15 @@ console.log(isThisAnEmail("eede"))
 
 function whatDayIsIt() {
 
-  let daysOfWeek = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato']
+  let giorniWeek = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato']
 
-  let currentDate = new Date()
+  let dataOggi = new Date()
 
-  let currentDay = currentDate.setDate(currentDate.getDate())
+  let oggi = dataOggi.setDate(dataOggi.getDate())
 
-  let dayOfWeekNumber = currentDate.getDay()
+  let indiceGiorno = dataOggi.getDay()
 
-  return daysOfWeek[dayOfWeekNumber]
+  return giorniWeek[indiceGiorno]
 }
 
 console.log(whatDayIsIt())
@@ -199,11 +199,11 @@ console.log(rollTheDices(4))
 */
 
 function howManyDays(data) {
-  let oggi = new Date()
-  let days = oggi.getDate()
-  return days;
+ let oggi = new Date()
+ 
 }
-console.log(howManyDays("23-11-05"))
+//tornaci dopo!!!
+
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -365,7 +365,7 @@ Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto 
 function printer() {
   let tds = document.querySelectorAll('td');
   for (i= 0; i < tds.length; i++) {
-    console.log(tds[i].textContents)
+    console.log(tds[i].innerHTML)
   }
 }
 
