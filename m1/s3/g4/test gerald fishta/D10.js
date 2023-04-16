@@ -199,17 +199,12 @@ console.log(rollTheDices(4))
 function howManyDays(data) {
  
   let oggi = new Date()
-  let anno = oggi.getFullYear()
-  let mese = oggi.getMonth()
-  let giorno  =  oggi.getDay()
-  let time = oggi.getTime()
-  
-  let dataOggi = new Date(anno, mese, giorno, time)
-  let diff = dataOggi.getTime() - data.getTime()
-  return diff
+  let diff = oggi.getTime() - data.getTime()
+  let diffReale = Math.floor(diff / (1000 * 60 * 60 * 24))
+  return diffReale
   
 }
-console.log(howManyDays())
+console.log(howManyDays(new Date(2023,2,1)))
 //tornaci dopo!!!
 
 
