@@ -5,8 +5,7 @@ body{
 
 body{
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular',
-    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Indie Flower', cursive;
 }
 
 #container{
@@ -32,6 +31,7 @@ body{
     left: 90px;
     background-color: gray;
     font-size: 1.2em;
+    
    
 }
 
