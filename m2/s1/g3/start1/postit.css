@@ -32,8 +32,7 @@ body{
     left: 90px;
     background-color: gray;
     font-size: 1.2em;
-
-    
+   
 }
 
 .postit{
@@ -41,7 +40,6 @@ body{
     height: 200px;
     width: 250px;
     padding: 0px;
-    background-color: #f3f39b;
     margin: 15px;
     box-shadow: inset 0px -20px 17px 0px rgb(171 168 168), 5px 5px 6px rgb(51, 51, 51);
     align-content: center;
@@ -49,22 +47,31 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    transition: transform 3s linear;
 }
+
+.postit:hover{
+    transform: scale(1.2);
+}
+
+
 h2 {
     font-size: 1.8em;
     margin-bottom: 23px;
 }
 
-#n2, #n4, #n8{
+.n2,.n4,.n8{
     background-color: hsl(120, 40%, 73%);
     transform: rotate(6deg);
 } 
 
-#n3, #n6{
+.n3, .n6{
     background-color: rgb(157, 138, 168);
     transform: rotate(-6deg);
 }
 
-#n1, #n5, #n7 {
+.n1, .n5, .n7 {
     transform: rotate(-8deg);
+    background-color: #f3f39b;
 }
+
