@@ -22,6 +22,8 @@ body{
     display: block;
     height: 75px;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
 }
 #root > div > div.navbarcontainer > div{
     display: flex;
@@ -29,6 +31,8 @@ body{
     height: 100%;
     width: 100%;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 #root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(1){
     text-decoration: none;
@@ -116,6 +120,11 @@ body{
     top: 22px;
     color: #cfcfcf;
 }
+.bottonearticle{
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+}
 .imgart{
     font-size: 13px;
     font-weight: 800;
@@ -151,7 +160,7 @@ body{
 }
 
 .mainpartflex{
-    width: 60%;
+    width: 67%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -161,26 +170,32 @@ body{
 
 .artwriter{
     font-weight: 500;
+    font-weight: 500;
+    display: flex;
+    margin-bottom: 10px;
+    align-content: center;
+    align-items: center;
+    
 }
 .maintitle{
     font-size: 23px;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 .mainbody{
     color: #4c4b4b;
+    margin-bottom: 15px ;
 }
 
-.artwriter{
-    border-radius: 50px;
-    overflow: hidden;
-}
+
 .mainarticle{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 542px;
+    width: 700px;
+    margin-bottom: 20px;
 }
 .sider{
     display: flex;
@@ -191,7 +206,11 @@ body{
     justify-content: flex-end;
     width: 87%;
     position: sticky;
-    bottom: 30px;
+    bottom: 180px;
+}
+.sidersecond{
+    position: relative;
+    left: -20px;
 }
 .siderbutton{
         background-color: white;
@@ -208,7 +227,7 @@ body{
         border-radius: 6px;
 }
 .siderflex{
-    width: 600px;
+    width: 640px;
 }
 .siderfirst{
     display: flex;
