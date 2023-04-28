@@ -18,14 +18,15 @@ body{
     display: block;
     font-family: 'Spectral', serif;
 }
-#root > div > div.navbarcontainer{
+.navbarcontainer{
     display: block;
     height: 75px;
     border-bottom: 1px solid black;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
-#root > div > div.navbarcontainer > div{
+.navbar{
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -33,21 +34,23 @@ body{
     align-items: center;
     position: sticky;
     top: 0;
+    background-color: #ffc017;
+    
 }
-#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(1){
+#root > div.navbarcontainer > div > div.navbarelements > a:nth-child(1){
     text-decoration: none;
     color: black;
 }
-#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(2){
+#root > div.navbarcontainer > div > div.navbarelements > a:nth-child(2){
     text-decoration: none;
     color: black;
-}#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(3){
+}#root > div.navbarcontainer > div > div.navbarelements > a:nth-child(3){
     text-decoration: none;
     color: black;
-}#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(4){
+}#root > div.navbarcontainer > div > div.navbarelements > a:nth-child(4){
     text-decoration: none;
     color: black;
-}#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(5){
+}#root > div.navbarcontainer > div > div.navbarelements > a:nth-child(5){
     text-decoration: none;
     color: black;
 }
@@ -80,7 +83,7 @@ body{
     margin-bottom: 27px;
     font-size: 23px;
 }
-#root > div > div.navbarcontainer > div > div.navbarelements > button{
+#root > div.navbarcontainer > div > div.navbarelements > button{
     border: black;
     border-radius: 20px;
     background-color: black;
@@ -247,4 +250,7 @@ body{
 .siderbuttons{
     width: 33%;
     margin-bottom: 9px;
+}
+.white{
+    background-color: white;
 }
