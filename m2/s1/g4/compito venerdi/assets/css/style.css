@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    font-family:'Roboto Serif', serif;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,0.8);
+    position: relative;
+    min-height: 100vh;
+}
+
+.starter{
+    background-color: #ffc017;
+    display: block;
+    font-family: 'Spectral', serif;
+}
+#root > div > div.navbarcontainer{
+    display: block;
+    height: 75px;
+    border-bottom: 1px solid black;
+}
+#root > div > div.navbarcontainer > div{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(1){
+    text-decoration: none;
+    color: black;
+}
+#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(2){
+    text-decoration: none;
+    color: black;
+}#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(3){
+    text-decoration: none;
+    color: black;
+}#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(4){
+    text-decoration: none;
+    color: black;
+}#root > div > div.navbarcontainer > div > div.navbarelements > a:nth-child(5){
+    text-decoration: none;
+    color: black;
+}
+#root > div > div.starterbottom{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+#root > div > div.starterbottom > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#root > div > div.starterbottom > div > div.curious{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#root > div > div.starterbottom > div > div.curious > div > h1{
+    font-size: 106px;
+    margin-bottom: 16px;
+}
+#root > div > div.starterbottom > div > div.curious > div > p{
+    margin-bottom: 27px;
+    font-size: 23px;
+}
+#root > div > div.navbarcontainer > div > div.navbarelements > button{
+    border: black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    height: 36px;
+    width: 88px;
+}
+
+#root > div > div.starterbottom > div > div.curious > div > button{ 
+    border: black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 160px;
+    font-size: 18px;
+}
+#root > div.secondhalf{
+    display: flex;
+    flex-direction: column;
+}
+.trendingflex{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+.article{
+    position: relative;
+    width: 476px;
+}
+.numeroart{
+    font-size: 35px;
+    position: relative;
+    left: -18px;
+    top: 22px;
+    color: #cfcfcf;
+}
+.imgart{
+    font-size: 13px;
+    font-weight: 800;
+    position: relative;
+    left: 36px;
+}
+.titoletto{
+    margin-top: 15px;
+    position: relative;
+    left: 35px;
+    font-weight: 1000;
+}
+.data{
+    margin-top: 15px;
+    position: relative;
+    left: 35px;
+    color: grey;
+}
+.trendinglogo{
+    width: 227px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 199px;
+    top: 31px;
+}
+
