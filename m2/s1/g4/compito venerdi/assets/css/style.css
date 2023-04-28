@@ -146,3 +146,81 @@ body{
     top: 31px;
 }
 
+.mainpart{
+    padding-top: 50px;
+}
+
+.mainpartflex{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artwriter{
+    font-weight: 500;
+}
+.maintitle{
+    font-size: 23px;
+    font-weight: 700;
+}
+.mainbody{
+    color: #4c4b4b;
+}
+
+.artwriter{
+    border-radius: 50px;
+    overflow: hidden;
+}
+.mainarticle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 542px;
+}
+.sider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: baseline;
+    justify-content: flex-end;
+    width: 100%;
+}
+.siderbutton{
+        background-color: white;
+        padding: 8px;
+        width: 116px;
+        border: solid 0.5px gray;
+        border-radius: 6px;
+}
+.sidersecondbutton{
+    background-color: white;
+        padding: 8px;
+        width: 90px;
+        border: none;
+        border-radius: 6px;
+}
+.siderflex{
+    width: 600px;
+}
+.siderfirst{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.sidertitle{
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.siderbuttons{
+    width: 33%;
+    margin-bottom: 9px;
+}
