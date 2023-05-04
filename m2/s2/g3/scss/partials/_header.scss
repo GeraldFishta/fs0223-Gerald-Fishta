@@ -1,6 +1,12 @@
 header {
     display: flex;
     margin: 10px;
+    background-color: slateblue;
+    padding: 20px;
+}
+
+.pHeader {
+    width: 75%;
 }
 
 .textContainer {
@@ -9,16 +15,17 @@ header {
     flex-direction: row;
 }
 
-body > header > div.textContainer > p{
-    width:50%;
+h3 {
+    width: -webkit-fill-available;
 }
+
 
 .buttonContainer{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
     align-items: center;
     width: 38%;
+    justify-content: center;
 }
