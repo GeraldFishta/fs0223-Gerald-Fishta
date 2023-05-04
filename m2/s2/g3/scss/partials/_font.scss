@@ -1,0 +1,15 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 1em;
+}
+
+li{
+    font-size: 0.9em;
+}
+
+h3 {
+    @include bigTitle
+}

@@ -1,0 +1,30 @@
+.button{
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.firstButton{
+    @extend .button;
+    background-color: $colorPrimoBottone;
+    &:hover {
+        @include buttonHover(rgb(249, 63, 63), black);
+      }
+}
+
+.secondButton{
+    @extend .button;
+    background-color: $colorSecondoBottone;
+    &:hover {
+        @include buttonHover(rgb(249, 63, 63), black);
+      }
+}
+
+.thirdButton{
+    @extend .button;
+    background-color: $colorTerzoBottone;
+    &:hover {
+        @include buttonHover(rgb(249, 63, 63), black);
+      }
+}
+

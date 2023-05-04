@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button, .thirdButton, .secondButton, .firstButton {
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.firstButton {
+  background-color: #0e6cff;
+}
+.firstButton:hover {
+  background-color: rgb(249, 63, 63);
+  color: black;
+}
+
+.secondButton {
+  background-color: #ff8700;
+}
+.secondButton:hover {
+  background-color: rgb(249, 63, 63);
+  color: black;
+}
+
+.thirdButton {
+  background-color: #4caf50;
+}
+.thirdButton:hover {
+  background-color: rgb(249, 63, 63);
+  color: black;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 1em;
+}
+
+li {
+  font-size: 0.9em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+.padding-inline {
+  padding: 2px;
+}
+
+.padding-block {
+  padding: 5px;
+}
+
+nav {
+  background-color: #640fc5;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80%;
+}
+
+header {
+  display: flex;
+  margin: 10px;
+}
+
+.textContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+body > header > div.textContainer > p {
+  width: 50%;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+  width: 38%;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px black;
+}/*# sourceMappingURL=style.css.map */

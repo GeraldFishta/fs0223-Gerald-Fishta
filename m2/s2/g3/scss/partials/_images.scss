@@ -1,0 +1,11 @@
+.images {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.card {
+    @include card
+}
