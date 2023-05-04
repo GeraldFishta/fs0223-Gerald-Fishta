@@ -124,4 +124,13 @@ body > header > div.textContainer > p {
 .card {
   border: 1px solid black;
   box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  border: 1px solid black;
+}
+
+.imgPrincipale {
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */

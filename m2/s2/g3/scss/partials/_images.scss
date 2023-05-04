@@ -7,5 +7,10 @@
 }
 
 .card {
-    @include card
+    @include card;
+    @include floating;
+}
+
+.imgPrincipale{
+    @include floating;
 }

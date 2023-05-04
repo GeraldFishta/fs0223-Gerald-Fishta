@@ -11,3 +11,9 @@
     border: 1px solid black;
     box-shadow: 0px 0px 5px black;
 }
+
+@mixin floating {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    border: 1px solid black;
+}
