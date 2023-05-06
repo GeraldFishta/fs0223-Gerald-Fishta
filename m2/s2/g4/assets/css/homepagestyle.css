@@ -270,6 +270,7 @@ background-color: transparent !important;
 font-size: 0.75rem !important;
 color:rgba(255, 255, 255, 0.367);
 }
+
 body > div.container.footer > div:nth-child(1){
     margin-bottom: 10px;
 }
@@ -281,6 +282,7 @@ body > div.container.footer > div:nth-child(2) > div > div > div:nth-child(1) > 
 body > div.container.footer > div:nth-child(1) > div{
     height: 39px;
     margin-left: 141px;
+    color:rgba(255, 255, 255, 0.367);
 }
 
 body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-instagram{
