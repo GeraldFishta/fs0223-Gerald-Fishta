@@ -1,8 +1,8 @@
 body{
     background-color: #141414 !important;
-    overflow-x: hidden;
-    width: 100vw;
+     overflow-x: hidden;
      position: relative; 
+     height: 900px;
 }
 
 .netflix-padding-left{
@@ -15,7 +15,7 @@ body{
 }
 
 .netflix-navbar{
-     background-color: #0C0C0C !important; 
+    background-color: #0C0C0C !important; 
     z-index: 1000;
     transition: background 0.2s linear;
     position: fixed;
@@ -102,27 +102,40 @@ i{
     color: #fff;
 }
 
-
+.slider-box{
+    height: 70vh;
+}
 
 .slider{
     position: absolute;
-    top: 600px ;
+    top: 200px ;
     z-index: 500;
     margin-left: 80px; 
+    height: 180px;
 }
-
-
 
 .slider2{
     position: absolute;
-    top: 800px ;
+    top: 400px ;
     z-index: 500;
 }
 
 .slider3{
     position: absolute;
-    top: 1000px ;
+    top: 600px ;
     z-index: 500;
+}
+
+body > div.slider-box > div.container-fluid.slider > section > p > b{
+    font-size: 23px;
+}
+
+body > div.slider-box > div.container-fluid.slider2 > section > p > b{
+    font-size: 23px;
+}
+
+body > div.slider-box > div.container-fluid.slider3 > section > p > b{
+    font-size: 23px;
 }
 
 
@@ -136,8 +149,8 @@ i{
 
 
 .card:hover{
-    transform: scaleX(1.4) scaleY(1.4);
-    z-index: 10;
+    transform: scaleX(1.2) scaleY(1.2);
+    z-index: 1200;
 }
 
 
@@ -163,6 +176,7 @@ i{
 .card:hover > .card-body{
     display: block;
      height: max-content !important; 
+     z-index: 1200;
 }
 
 .carousel-control-prev{
@@ -204,7 +218,7 @@ i{
 
 .footer{
     margin-top: 150px;
-    margin-bottom: 100px;
+    margin-bottom: 0px !important;
 }
 
 ul{
@@ -225,8 +239,8 @@ ul{
 }
 
 .copy-right{
-    font-size: 15px;
+      font-size: 12px;
       font-weight: 200;
-      color: rgb(249, 14, 14);
+      color: rgba(255, 255, 255, 0.367);
       margin-left: 28px;
 }
