@@ -102,12 +102,36 @@ i{
     color: #fff;
 }
 
+
 body > nav > div > div > div.right.d-flex.align-items-center{
     margin-right: 15px;
 }
 
+body > div.row{
+    display: flex;
+    margin: 35px;
+    margin-left: 70px;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+body > div.row > div.col-3{
+    width: 10%;
+    font-size: 23px;
+    color: white;
+    font-weight: bolder;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+#dropdownMenuButton1{
+    border-radius: 0% !important; 
+    background-color: #0C0C0C !important;
+}
+
 .slider-box{
-    height: 90vh;
+    height: 70vh;
     margin-left: 70px;
 }
 
@@ -210,7 +234,7 @@ body > div.slider-box > div.container-fluid.slider3 > section > p > b{
 
 
 .footer{
-    margin-top: 150px;
+    margin-top: 95px;
     margin-bottom: 0px !important;
 }
 
@@ -238,12 +262,18 @@ ul{
       margin-left: 28px;
 }
 
-body > div.container.footer > div:nth-child(1) > div > div > div:nth-child(1) > ul > li:nth-child(5) > button{
-    font-size: 10px;
-    margin-top: 25px;
-    border-radius: 0%;
-    background-color: transparent;
+.btn-outline-dark{ 
+font-size: 10px !important;
+margin-top: 15px !important;
+border-radius: 0% !important;
+background-color: transparent !important;
+font-size: 0.75rem !important;
+color:rgba(255, 255, 255, 0.367);
 }
+body > div.container.footer > div:nth-child(1){
+    margin-bottom: 10px;
+}
+
 body > div.container.footer > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(5){
     margin-top: 15px;
 }
@@ -251,4 +281,20 @@ body > div.container.footer > div:nth-child(2) > div > div > div:nth-child(1) > 
 body > div.container.footer > div:nth-child(1) > div{
     height: 39px;
     margin-left: 141px;
+}
+
+body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-instagram{
+    margin-right: 15px;
+}
+
+body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-facebook{
+    margin-right: 15px;
+}
+
+body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-twitter{
+    margin-right: 15px;
+}
+
+body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-youtube{
+    margin-right: 15px;
 }
