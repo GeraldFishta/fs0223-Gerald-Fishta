@@ -102,8 +102,12 @@ i{
     color: #fff;
 }
 
+body > nav > div > div > div.right.d-flex.align-items-center{
+    margin-right: 15px;
+}
+
 .slider-box{
-    height: 70vh;
+    height: 90vh;
 }
 
 .slider{
@@ -145,6 +149,8 @@ body > div.slider-box > div.container-fluid.slider3 > section > p > b{
     transition: 0.2s linear;
     margin: 3px;
     position: relative;
+    border: none !important;
+    border-radius: 0% !important;
 }
 
 
@@ -154,22 +160,9 @@ body > div.slider-box > div.container-fluid.slider3 > section > p > b{
 }
 
 
-.card-body{
-    display: none;
-    height: 0px; 
-    padding: 10px 15px;
-    position: absolute;
-    background-color: #141414;
-    top: 120px;
-    width: 100%;
-}
-
-
 .card-icon{
-    color: #fff;
     padding: 0px !important;
     font-size: 28px;
-    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -191,7 +184,6 @@ body > div.slider-box > div.container-fluid.slider3 > section > p > b{
     border: none;
     width: 30px !important;
 }
-
 
 .margin-right{
     margin-right: 100px;
@@ -243,4 +235,11 @@ ul{
       font-weight: 200;
       color: rgba(255, 255, 255, 0.367);
       margin-left: 28px;
+}
+
+body > div.container.footer > div:nth-child(1) > div > div > div:nth-child(1) > ul > li:nth-child(5) > button{
+    font-size: 10px;
+    margin-top: 15px;
+    border-radius: 0%;
+    background-color: transparent;
 }
