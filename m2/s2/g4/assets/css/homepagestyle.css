@@ -240,7 +240,15 @@ ul{
 
 body > div.container.footer > div:nth-child(1) > div > div > div:nth-child(1) > ul > li:nth-child(5) > button{
     font-size: 10px;
-    margin-top: 15px;
+    margin-top: 25px;
     border-radius: 0%;
     background-color: transparent;
+}
+body > div.container.footer > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(5){
+    margin-top: 15px;
+}
+
+body > div.container.footer > div:nth-child(1) > div{
+    height: 39px;
+    margin-left: 141px;
 }
