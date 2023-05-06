@@ -1,0 +1,25 @@
+body{
+    background-color: #141414 !important;
+}
+
+#logo-netflix > img{
+    width: 150px !important;
+}
+
+.container-fluid{
+    color:white;
+    color: white; 
+    position: relative;
+    flex-wrap: wrap;
+    width: 800px;
+    padding-top: 200px;
+}
+
+#dropdownMenuButton1{
+    width: 120px;
+    background: black;
+}
+
+body > div.container-fluid > div:nth-child(2) > div.col-2 > img{
+    width: 150px;
+}

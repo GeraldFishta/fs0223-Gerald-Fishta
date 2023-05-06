@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <title>Netflix Profile</title>
+</head>
+
+<body>
+    
+    <div id="logo-netflix">
+        <img src="assets/netflix_logo.png" alt="">
+    </div>
+
+    <div class="container-fluid">
+
+
+        <div class="row">
+            <div class="col">
+                <h1>Edit profile</h1>
+               <hr>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-2">
+                <img src="assets/avatar.png" alt="">
+            </div>
+            <div class="col-7 offset-1">
+                <div class="row mb-4"><input class="form-control" type="text" placeholder="Name profile" aria-label="default input example"></div>
+                <div class="row mb-1">Language:</div>
+                <div class="row row ">
+                <div class="dropdown row mb-4">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      English
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Italiano</a></li>
+                      <li><a class="dropdown-item" href="#">Español</a></li>
+                      <li><a class="dropdown-item" href="#">Korean</a></li>
+                    </ul>
+                  </div>
+                  <hr>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-7 offset-1">
+               <div class="row mb-2"> <h1> Maturity Settings </h1> </div> 
+               <div class="row"><button type="button" class="btn btn-secondary">ALL MATURITY RATINGS:</button></div>
+               <div><p>Show titles of all maturity ratings for this profile.</p></div>
+               <div><button type="button" class="btn btn-outline-dark">Edit</button></div>
+               <div><hr></div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-7 offset-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Autoplay next episode in a series on all devices.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Autoplay previews while browsing on all devices.
+                    </label>
+                  </div>
+                  <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-outline-dark">Save</button>
+                    <button type="button" class="btn btn-outline-dark">Cancel</button>
+                    <button type="button" class="btn btn-outline-dark">Delete Profile</button>
+                  </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
