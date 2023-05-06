@@ -4,6 +4,9 @@ body{
     position: relative; 
     height: 900px;
 }
+#blacknav{
+    background-color: #0C0C0C !important;
+}
 
 .navbar-brand img{
      width: 100px;
@@ -41,6 +44,11 @@ body > div.row > div.col-3{
 #dropdownMenuButton1{
     border-radius: 0% !important; 
     background-color: #0C0C0C !important;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .slider-box{
