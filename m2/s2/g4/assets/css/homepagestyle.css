@@ -2,7 +2,7 @@ body{
     background-color: #141414 !important;
     overflow-x: hidden;
     position: relative; 
-    height: 900px;
+    
 }
 #blacknav{
     background-color: #0C0C0C !important;
@@ -130,8 +130,20 @@ body > div.slider-box > div.container-fluid.slider3 > section > p > b{
      z-index: 1200;
 }
 
+.carousel-control-prev-icon{
+    left: -10rem;
+    position: relative;
+}
+
+.carousel-control-next-icon{
+    left: -6rem;
+    position: relative;
+}
+
+
 .carousel-control-prev{
     display: none;
+    left: -6rem;
 }
 
 .carousel-control-next{
@@ -225,7 +237,8 @@ body > div.container.footer > div:nth-child(1) > div{
       flex-direction: column;
     }
   }
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
     .slider-box {
       padding: 0;
     }
@@ -233,12 +246,36 @@ body > div.container.footer > div:nth-child(1) > div{
       flex: 0 0 50%;
       max-width: 50%;
     }
+    .carousel-control-next{
+        left: 0rem;
+    }
   }
   
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .carousel-item .card {
       flex: -1 0 100%;
       max-width: 100%;
     }
   }
-  
+  @media (max-width: 576px) {
+    .carousel-inner .carousel-item .card:not(:first-of-type) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .carousel-inner .carousel-item .card:nth-child(n+2) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .carousel-inner .carousel-item .card:nth-child(n+3) {
+      display: none;
+    }
+  }
+  @media (max-width: 1200px) {
+    .carousel-inner .carousel-item .card:nth-child(n+5) {
+      display: none;
+    }
+  }
