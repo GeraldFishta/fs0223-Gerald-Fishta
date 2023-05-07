@@ -235,4 +235,10 @@ body > div.container.footer > div:nth-child(1) > div{
     }
   }
   
+  @media (max-width: 767px) {
+    .carousel-item .card {
+      flex: -1 0 100%;
+      max-width: 100%;
+    }
+  }
   
