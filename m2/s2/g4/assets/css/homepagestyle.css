@@ -12,12 +12,6 @@ body{
      width: 100px;
 }
 
-i{
-    font-size: 20px;
-    color: #fff;
-    padding: 5px 20px;
-}
-
 
 body > nav > div > div > div.right.d-flex.align-items-center{
     margin-right: 15px;
@@ -41,10 +35,17 @@ body > div.row > div.col-3{
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+body > div.row.gap-3 > div.col-4.col-md-3.mb-3.mb-md-0.d-flex.align-items-center{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
 #dropdownMenuButton1{
     border-radius: 0% !important; 
     background-color: #0C0C0C !important;
 }
+
 
 .dropdown{
     display: flex;
@@ -198,26 +199,14 @@ body > div.container.footer > div:nth-child(2) > div > div > div:nth-child(1) > 
 }
 
 body > div.container.footer > div:nth-child(1) > div{
-    height: 39px;
-    margin-left: 141px;
-    color:rgba(255, 255, 255, 0.367);
+    margin-left: 30px;
+    color: rgba(255, 255, 255, 0.367);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-instagram{
-    margin-right: 15px;
-}
-
-body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-facebook{
-    margin-right: 15px;
-}
-
-body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-twitter{
-    margin-right: 15px;
-}
-
-body > div.container.footer > div:nth-child(1) > div > svg.bi.bi-youtube{
-    margin-right: 15px;
-}
 
 
 @media (max-width: 767px) {
