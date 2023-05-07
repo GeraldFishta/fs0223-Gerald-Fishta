@@ -1,5 +1,6 @@
 #blacknav{
     background-color: #0C0C0C !important;
+    margin-bottom: 50px;
 }
 
 .navbar-brand img{
@@ -7,8 +8,42 @@
 }
 
 
+
 @media (max-width: 767px) {
     .navbar-nav {
       flex-direction: column;
+    }
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    .col-6{
+      width:80%
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    #figliodi {
+      width:55%;
+    }
+    #maledetto{
+      width:33%;
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+    #maledetto{
+      width: 55.333333%;
+    }
+    #figliodi {
+      width: 40.6%;
+    }
+    #oddio{
+      width: 60%
+    }
+  }
+  @media screen and (max-width:769px) {
+    #maledetto{
+      width: 33.3%
     }
   }
