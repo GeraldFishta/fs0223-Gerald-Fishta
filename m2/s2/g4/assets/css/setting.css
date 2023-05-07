@@ -1,0 +1,14 @@
+#blacknav{
+    background-color: #0C0C0C !important;
+}
+
+.navbar-brand img{
+     width: 100px;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-nav {
+      flex-direction: column;
+    }
+  }
