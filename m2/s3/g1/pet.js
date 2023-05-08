@@ -1,61 +1,59 @@
+let arrayPets = [];
 
-
-//creo il costruttore Pet in Js, assegnandoli i parametri che mi interessa tenga in conto negli oggetti
+let petNameField = document.querySelector("#petName")
+let ownerNameField = document.querySelector("#ownerName")
+let speciesNameField = document.querySelector("#species")
+let breedNameField = document.querySelector("#breed")
 
 class Pet {
-    constructor(_petName, _ownerName, _species, _breed){
-        this.petName = _petName;
-        this.ownerName = _ownerName;
-        this.species = _species;
-        this.species= _species;
+  constructor(petName, ownerName, species, breed) {
+      this.petName = petName
+      this.ownerName= ownerName
+      this.species = species
+      this.breed = breed
+  }
+  sameOwnerPet = function (otherPet){
+   if (this.OwnerName === otherPet.OwnerName){
+    return true }
+    else {
+      return false
     }
-    //qua creo la funzione per verificare che due animali abbiamo lo stesso propietario
-    sameOwner(animal) {
-        if(this.ownerName == animal.ownerName)
-        return true
-    }
-}
- 
-//ora qua creo l'espresssioni del let per il form e per la lista perche avro bisogno di maneggiarle, creando anche un array vuoto
-//dove mettere i diversi Pet 
-
-let petForm = document.getElementById('pet-form');  
-let petList = document.getElementById('pet-list');
-const pets = []
-
-
-//si crea una funzione per renderizzare la lista una volta ricevuti i dati dal form 
-
-function renderPetList() {
-    pets.forEach(pet => {
-      const li = document.createElement('li');
-      li.textContent = `${pet.petName} - ${pet.ownerName} - ${pet.species} - ${pet.breed}`;
-      petList.appendChild(li);
-    });
+   }
   }
 
-//ogni form e cosi simpatico da refreshare la pagina, quindi grazie a google sappiamo come impedirglielo!
-//dopo deve prendere i valori all interno delle proprieta che ci interessano nell oggetto 
-//e creare il nuovo Pet con i valori di prima, fatto cio pusha nella lista e renderizzala 
+document.getElementById("check").addEventListener("click", () => {
+  let lastPet = arrayPets[arrayPets.length -1]
+  let secondLastPet = arrayPets[arrayPets.length -2]
+  alert(lastPet.sameOwnerPet(secondLastPet))
+})
 
-petForm.addEventListener('submit', e  => {
-    e.preventDefault();
-    
-    
-    //non sono certo funzioni, ma continuiamo enunciando le variabili che corriponderanno ai valori all interno dei vari pet;
-    
-    const petName = document.getElementById('pet-name').value;
-    const ownerName = document.getElementById('owner-name').value;
-    const species = document.getElementById('species').value;
-    const breed = document.getElementById('breed').value;
-    
-    
-    const pet = new Pet(petName, ownerName, species, breed);
-    pets.push(pet);
-    
-    renderPetList();
-    petForm.reset();
-});
+const emptyPetList = function () {
+  petListReference = document.getElementById("petList")
+  petListReference.innerHTML = ''
+}
 
+let pushingPetsInHtml = function(){
+  petListReference = document.getElementById("petList")
+  arrayPets.forEach(pet => {
+        let newLi = document.createElement("li")
+        newLi.innerText = `il pet si chiama ${pet.petName}, il suo propietario si chiama ${pet.ownerName}, e un ${pet.species} ${pet.breed}`
+        petListReference.appendChild(newLi)
+      })
+}
 
-//ovviamente non va!!!! l'amico Null e sempre con noi e allora tiro un bel bestemmione e ci torno dopo
+let petFormReference = document.querySelector("form")
+
+petFormReference.addEventListener("submit", (e) =>{
+  e.preventDefault()
+
+  let petCreated =  new Pet(petNameField.value, ownerNameField.value, speciesNameField.value, breedNameField.value)
+  console.log("un nuovo pet", petCreated)
+  arrayPets.push(petCreated)
+  petNameField.value = "";
+  ownerNameField.value = "";
+  speciesNameField.value= "";
+  breedNameField.value= "";
+  emptyPetList()
+  pushingPetsInHtml()
+  
+})
