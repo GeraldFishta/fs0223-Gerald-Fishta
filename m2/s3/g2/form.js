@@ -47,15 +47,14 @@ function addUserToList(name) {
 //niente, continua a dare Nan
 
 function tempoTrascorso(){  
-    let tempoInizio = sessionStorage.getItem('tempoInizio')
-	let t = Date.parse(new Date()) - Date.parse(tempoInizio); 
+    let tempoInizio = JSON.parse(sessionStorage.getItem('tempoInizio'))
+	let t = Date.parse(new Date()) - new Date(tempoInizio); 
 	let sec = Math.floor( (t/1000) % 60 ); 
 	let min = Math.floor( (t/1000/60) % 60 ); 
 	let ore = Math.floor( (t/(1000*60*60)) % 24 ); 
 	let giorni = Math.floor( t/(1000*60*60*24) ); 
 
 	return { 
-		'totale': t, 
 		'giorni': giorni, 
 		'ore': ore,
 		'minuti': min, 
@@ -63,8 +62,8 @@ function tempoTrascorso(){
 	}; 
 }
 
-if(sessionStorage.getItem("tempoInizio") != null){
-    sessionStorage.setItem("tempoInizio", new Date())
+if(sessionStorage.getItem("tempoInizio") === null){
+    sessionStorage.setItem("tempoInizio", JSON.stringify(new Date()))
     }
 
     setInterval(function(){
