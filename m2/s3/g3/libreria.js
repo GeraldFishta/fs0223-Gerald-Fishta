@@ -7,7 +7,8 @@ if (res.ok) {                                              //se funziona dammi i
 }
 })
 .then((data) => {                //secondo then per lavorare i dati json dati dal server 
-    console.log("libro", data)  //funziona, e un array di 50 libri. per ognuna fai una card..
+    console.log("libro", data)
+    let carrello = ""  //funziona, e un array di 50 libri. per ognuna fai una card..
     let bookCards = "";
     let bookNames = "";
     data.forEach((book, index) => {
@@ -24,6 +25,7 @@ if (res.ok) {                                              //se funziona dammi i
                 <h4 class="card-title">${book.title}</h4>
                 <p class= "card-text">${book.price}</p>
                 <button class= "btn btn-danger" onClick= "removeBook(event)">Scarta</button>
+                <button class= "btn btn-success" onClick= "addBook(event)">Compra</button>
             </div>
             </div>
             </div>
@@ -47,5 +49,17 @@ if (res.ok) {                                              //se funziona dammi i
 function removeBook (event){
     event.target.closest(".col-xxl-3").remove()  //in scarta avevo richiamato col senza il .col prima.  continua ad apparire solo un libro
 }
+
+function addBookToList (title) {
+    let li = document.createElement("li");
+    li.innerHTML = title;
+    document.querySelector("#carrello").appendChild(li)
+}
+function addBook(event) {
+    const bookTitle = event.target.closest(".card-body").querySelector(".card-title").textContent;
+    addBookToList(bookTitle); 
+   
+}
+
 
 //sta funzionando ma ne appare solo uno di libro
