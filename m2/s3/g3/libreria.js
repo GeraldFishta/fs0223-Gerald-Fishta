@@ -47,7 +47,7 @@ if (res.ok) {                                              //se funziona dammi i
   })
 
 function removeBook (event){
-    event.target.closest(".col-xxl-3").remove()  //in scarta avevo richiamato col senza il .col prima.  continua ad apparire solo un libro
+    event.target.closest(".col-xxl-3").remove() 
 }
 
 function addBookToList (title) {
