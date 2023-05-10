@@ -8,7 +8,8 @@ if (res.ok) {                                              //se funziona dammi i
 })
 .then((data) => {                //secondo then per lavorare i dati json dati dal server 
     console.log("libro", data)  //funziona, e un array di 50 libri. per ognuna fai una card..
-    let bookCards = ""
+    let bookCards = "";
+    let bookNames = "";
     data.forEach((book, index) => {
         if (index % 4 === 0) {                 // proviamo dandogli una riga divisa ogni 4 libri che piglia
           bookCards += '<div class="row">'
@@ -31,10 +32,14 @@ if (res.ok) {                                              //se funziona dammi i
             if (index % 4 === 3 || index === data.length - 1) { // se la riga arriva a 4 chiude 
 
             bookCards += `</div>`
-            }
+        }
+        bookNames += `<li>${book.title}</li>`
         })
-        document.querySelector("#book-list").innerHTML = bookCards;    //il problema e che mi sta creando una sola card, non posso andare di inner.html
+        document.querySelector("#book-list").innerHTML = bookCards;
+        document.querySelector("#book-names").innerHTML= bookNames;  
+
 })
+
 .catch((err) => {
     console.log(err)
   })
