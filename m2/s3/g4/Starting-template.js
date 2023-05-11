@@ -52,6 +52,7 @@ loadSecondaryImagesButton.addEventListener('click', () => {
        newImg.height = "225"
        newImg.src = photos.photos[i].src.landscape
        cardsArray[i].prepend(newImg)
+       
       })
       })
       
@@ -70,5 +71,10 @@ buttonHide.forEach((element) => {
   })
 })
 
+
+let newText = document.getElementsByClassName('text-muted')
+newText.forEach(element , i  => {
+  element.innerHTML = photos.photos.id[i]
+})
 
 
