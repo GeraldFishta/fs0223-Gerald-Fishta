@@ -43,13 +43,15 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
                 <p class="card-text">
                   ${event.description}
                 </p>
-                <p>${event.brand} - ${
-            event.price
-          }€</p>
+                <p>${event.brand} - ${event.price}€</p>
                 <a href="./backoffice.html?eventId=${
                   event._id
                 }" class="btn btn-primary">MODIFICA</a>
               </div>
+              <a href="./details.html?eventId=${
+                event._id
+              }" class="btn btn-primary">DETTAGLI</a>
+            </div>
             </div>
           </div>
           `
