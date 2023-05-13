@@ -20,7 +20,7 @@ function Phone(name = nameInput.value, description = descriptionInput.value, bra
     this.imageUrl = image;
 }
 
-let getProducts = function () {
+let showProducts = function () {
     
 fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
     headers: {
@@ -66,5 +66,5 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
 }
 
 window.onload = () => {
-    getProducts()
+    showProducts()
 }
