@@ -7,6 +7,10 @@ let saveButton = document.querySelector('#save-button')
 let deleteButton = document.querySelector('#delete-button')
 let rowReference   = document.querySelector('#events-container')
 let fetchUrl = "https://striveschool-api.herokuapp.com/api/product/";
+let details = document.querySelector('#details')
+let dettagliButton = document.querySelector('#dettagli')
+
+
 console.log(nameInput)
 
 function Phone(name = nameInput.value, description = descriptionInput.value, brand = brandInput.value, price = priceInput.value, image = imagineInput.value) {
@@ -138,5 +142,52 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
     }
 
 
+let getDetails = function () {
+    
+  fetch("https://striveschool-api.herokuapp.com/api/product/", {
+      headers: {
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDVkNzg4Zjc0MDAwMTQyODc0ODgiLCJpYXQiOjE2ODM4ODM0NzksImV4cCI6MTY4NTA5MzA3OX0.k78ZCoP1rC9euVSQ68bNPaqZ6OAMM-MTQpfZc06pTmk"
+      }
+      })
+      .then((res) => {
+          if (res.ok) {
+              return res.json()
+          } else {
+              throw new Error ("errore")
+          }
+      })
+      .then((data) => {
+          console.log('EVENTI IN DB', data)
+          data.forEach((event) => {
+            let colTemplate = `
+            <div class="col-12 col-md-3">
+              <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;"">
+              <img class= "w-100" style="height:220px" src="${event.imageUrl}" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">${event.name}</h5>
+                  <p class="card-text">
+                    ${event.description}
+                  </p>
+                  <p>${event.brand} - ${event.price}€</p>
+                  <a href="./backoffice.html?eventId=${
+                    event._id
+                  }" class="btn btn-primary">MODIFICA</a>
+                </div>
+                <a href="./details.html?eventId=${
+                  event._id
+                }" class="btn btn-primary" id="dettagli">DETTAGLI</a>
+              </div>
+              </div>
+            </div>
+            `
+            details.innerHTML += colTemplate
+            console.log(dettagli)
+          })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 
+  dettagli.addEventListener('click', getDetails() )
 
