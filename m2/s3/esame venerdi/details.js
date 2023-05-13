@@ -22,7 +22,7 @@ function Phone(name = nameInput.value, description = descriptionInput.value, bra
 
 let getProducts = function () {
     
-fetch("https://striveschool-api.herokuapp.com/api/product/", {
+fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
     headers: {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDVkNzg4Zjc0MDAwMTQyODc0ODgiLCJpYXQiOjE2ODM4ODM0NzksImV4cCI6MTY4NTA5MzA3OX0.k78ZCoP1rC9euVSQ68bNPaqZ6OAMM-MTQpfZc06pTmk"
     }
@@ -34,9 +34,8 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
             throw new Error ("errore")
         }
     })
-    .then((data) => {
-        console.log('EVENTI IN DB', data)
-        data.forEach((event) => {
+    .then((event) => {
+        console.log(event)
           let colTemplate = `
           <div class="col-12 col-md-3">
             <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;"">
@@ -60,7 +59,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
           `
           details.innerHTML = colTemplate
         })
-    })
+    
     .catch((err) => {
       console.log(err)
     })
