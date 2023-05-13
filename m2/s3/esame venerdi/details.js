@@ -58,7 +58,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
             </div>
           </div>
           `
-          rowReference.innerHTML += colTemplate
+          details.innerHTML = colTemplate
         })
     })
     .catch((err) => {
@@ -69,72 +69,3 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
 window.onload = () => {
     getProducts()
 }
-
-
-
-
-
-fetch("https://striveschool-api.herokuapp.com/api/product/", {
-    headers: {
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDVkNzg4Zjc0MDAwMTQyODc0ODgiLCJpYXQiOjE2ODM4ODM0NzksImV4cCI6MTY4NTA5MzA3OX0.k78ZCoP1rC9euVSQ68bNPaqZ6OAMM-MTQpfZc06pTmk"
-    }
-    })
-    .then((res) => {
-        if (res.ok) {
-          return res.json()
-          
-        } else {
-            throw new Error("Errore nel recupero dei dati")
-        }   
-        })
-
-        .then((data) => {
-            console.log('EVENTI IN DB', data)
-          })
-        .catch((err) => {
-        console.log(err)
-    })    
-
-
-    saveButton.addEventListener('click', function (e)  {
-        e.preventDefault();
-        fetch(eventId ? fetchUrl + eventId : fetchUrl, {
-        method: eventId ? "PUT" : "POST",
-        body: JSON.stringify(new Phone()),
-        headers: {
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDVkNzg4Zjc0MDAwMTQyODc0ODgiLCJpYXQiOjE2ODM4ODM0NzksImV4cCI6MTY4NTA5MzA3OX0.k78ZCoP1rC9euVSQ68bNPaqZ6OAMM-MTQpfZc06pTmk",
-            "Content-Type": "application/json"    
-        },
-        })
-        .then((res) => {
-            location.assign("./homepage.html")
-            console.log(res)
-        })
-        .catch((err) => {
-            console.log(err)
-        })    
-    })
-
-
-    console.log(eventId , "EVENT ID")
-
-    if (eventId) {
-        deleteButton.addEventListener('click', () => {
-            fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId , {
-        method: "DELETE",
-        headers: {
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDVkNzg4Zjc0MDAwMTQyODc0ODgiLCJpYXQiOjE2ODM4ODM0NzksImV4cCI6MTY4NTA5MzA3OX0.k78ZCoP1rC9euVSQ68bNPaqZ6OAMM-MTQpfZc06pTmk",
-            "Content-Type": "application/json"    
-        }})
-    .then((res) =>{
-        console.log(res)
-        if(res.ok) {
-            location.assign("./homepage.html")
-        }
-    })
-    .catch((err) =>{
-        throw new Error("problema")
-        
-    })
-})
-    }
