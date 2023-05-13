@@ -75,10 +75,6 @@ window.onload = () => {
 }
 
 
-
-
-
-
 fetch("https://striveschool-api.herokuapp.com/api/product/", {
     headers: {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDVkNzg4Zjc0MDAwMTQyODc0ODgiLCJpYXQiOjE2ODM4ODM0NzksImV4cCI6MTY4NTA5MzA3OX0.k78ZCoP1rC9euVSQ68bNPaqZ6OAMM-MTQpfZc06pTmk"
@@ -121,10 +117,9 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
         })    
     })
   }
+
     let adressBarContent = new URLSearchParams(window.location.search)
     let eventId = adressBarContent.get('eventId')
-    
-
     
 
     if (eventId) {
