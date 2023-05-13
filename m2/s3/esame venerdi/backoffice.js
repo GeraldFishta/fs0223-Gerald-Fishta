@@ -9,16 +9,17 @@ let rowReference   = document.querySelector('#events-container')
 let fetchUrl = "https://striveschool-api.herokuapp.com/api/product/";
 let details = document.querySelector('#details')
 let dettagliButton = document.querySelector('#dettagli')
-let adressBarContent = new URLSearchParams(window.location.search)
-let eventId = adressBarContent.get('eventId')
+let form = document.querySelector('#event-form')
+
 
 function Phone(name = nameInput.value, description = descriptionInput.value, brand = brandInput.value, price = priceInput.value, image = imagineInput.value) {
-    this.name = name;
+  this.name = name;
     this.description = description;
     this.brand = brand;
     this.price = price;
     this.imageUrl = image;
 }
+
 
 let getProducts = function () {
     
@@ -37,28 +38,31 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
     .then((data) => {
         console.log('EVENTI IN DB', data)
         data.forEach((event) => {
+          if(rowReference != null) {
           let colTemplate = `
-          <div class="col-12 col-md-3">
-            <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;"">
-            <img class= "w-100" style="height:220px" src="${event.imageUrl}" alt="">
-              <div class="card-body">
-                <h5 class="card-title">${event.name}</h5>
-                <p class="card-text">
-                  ${event.description}
-                </p>
-                <p>${event.brand} - ${event.price}€</p>
-                <a href="./backoffice.html?eventId=${
-                  event._id
-                }" class="btn btn-primary">MODIFICA</a>
-              </div>
-              <a href="./details.html?eventId=${
+          <div class="col-12 col-md-4 mb-4">
+          <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;">
+          <img class= "w-100" style="height:220px" src="${event.imageUrl}" alt="">
+            <div class="card-body">
+              <h5 class="card-title">${event.name}</h5>
+              <p class="card-text">
+                ${event.description}
+              </p>
+              <p>${event.brand} - ${event.price}€</p>
+              <a href="./backoffice.html?eventId=${
                 event._id
-              }" class="btn btn-primary" id="dettagliButton">DETTAGLI</a>
+              }" class="btn btn-primary">MODIFICA</a>
             </div>
-            </div>
+            <a href="./details.html?eventId=${
+              event._id
+            }" class="btn btn-primary" id="dettagliButton">DETTAGLI</a>
           </div>
-          `
+          </div>
+        </div>
+        `
+        
           rowReference.innerHTML += colTemplate
+          }
         })
     })
     .catch((err) => {
@@ -69,6 +73,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
 window.onload = () => {
     getProducts()
 }
+
 
 
 
@@ -96,8 +101,9 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
     })    
 
 
-    saveButton.addEventListener('click', function (e)  {
-        e.preventDefault();
+    if(saveButton !== null){
+        saveButton.addEventListener('click', function (e)  {  
+        e.preventDefault();       
         fetch(eventId ? fetchUrl + eventId : fetchUrl, {
         method: eventId ? "PUT" : "POST",
         body: JSON.stringify(new Phone()),
@@ -107,16 +113,19 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
         },
         })
         .then((res) => {
-            location.assign("./homepage.html")
+           location.assign("./homepage.html")
             console.log(res)
         })
         .catch((err) => {
             console.log(err)
         })    
     })
+  }
+    let adressBarContent = new URLSearchParams(window.location.search)
+    let eventId = adressBarContent.get('eventId')
+    
 
-
-    console.log(eventId , "EVENT ID")
+    
 
     if (eventId) {
         deleteButton.addEventListener('click', () => {
@@ -137,33 +146,4 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
         
     })
 })
-    }
-
-
-    
-const form = document.getElementById('event-form');
-const submitButton = document.getElementById('save-button');
-
-
-submitButton.addEventListener('click', function(event) {
-
-  event.preventDefault();
-
-
-  const nameField = document.getElementById('name');
-  const descriptionField = document.getElementById('description');
-  const brandField = document.getElementById('brand');
-  const priceField = document.getElementById('price');
-  const imgUrlField = document.getElementById('imgUrl');
-
-
-  if (nameField.value === '' || descriptionField.value === '' || brandField.value === '' || priceField.value === '' || imgUrlField.value === '') {
-
-    alert('Riempire correttamente tutti i campi, grazie.');
-
-
-    return;
-  }
-
-  form.submit();
-});
+}
