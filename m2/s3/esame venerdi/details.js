@@ -37,7 +37,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
     .then((event) => {
         console.log(event)
           let colTemplate = `
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-4 mb-4">
             <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;"">
             <img class= "w-100" style="height:220px" src="${event.imageUrl}" alt="">
               <div class="card-body">
