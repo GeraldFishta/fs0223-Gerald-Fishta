@@ -138,3 +138,32 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
     })
 })
     }
+
+
+    
+const form = document.getElementById('event-form');
+const submitButton = document.getElementById('save-button');
+
+
+submitButton.addEventListener('click', function(event) {
+
+  event.preventDefault();
+
+
+  const nameField = document.getElementById('name');
+  const descriptionField = document.getElementById('description');
+  const brandField = document.getElementById('brand');
+  const priceField = document.getElementById('price');
+  const imgUrlField = document.getElementById('imgUrl');
+
+
+  if (nameField.value === '' || descriptionField.value === '' || brandField.value === '' || priceField.value === '' || imgUrlField.value === '') {
+
+    alert('Riempire correttamente tutti i campi, grazie.');
+
+
+    return;
+  }
+
+  form.submit();
+});
