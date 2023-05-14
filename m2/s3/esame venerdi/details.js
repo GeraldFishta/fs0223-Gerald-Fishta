@@ -38,9 +38,15 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
         console.log(event)
           let colTemplate = `
           <div class="col-12 col-md-4 mb-4">
-            <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;"">
-            <img class= "w-100" style="height:220px" src="${event.imageUrl}" alt="">
-              <div class="card-body">
+            <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center; padding: 5px; box-shadow: 5px 5px 8px lightgray;">
+            <img class= "w-100" style="height: 550px;object-fit:cover;object-position:50% 50%;"" src="${event.imageUrl}" alt="">
+              <div class="card-body" style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+          ">
                 <h5 class="card-title">${event.name}</h5>
                 <p class="card-text">
                   ${event.description}
@@ -48,11 +54,11 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
                 <p>${event.brand} - ${event.price}€</p>
                 <a href="./backoffice.html?eventId=${
                   event._id
-                }" class="btn btn-primary">MODIFICA</a>
+                }" class="btn btn-dark">MODIFICA</a>
               </div>
               <a href="./details.html?eventId=${
                 event._id
-              }" class="btn btn-primary" id="dettagliButton">DETTAGLI</a>
+              }" class="btn btn-dark" id="dettagliButton">DETTAGLI</a>
             </div>
             </div>
           </div>

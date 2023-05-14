@@ -41,9 +41,15 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
           if(rowReference != null) {
           let colTemplate = `
           <div class="col-12 col-md-4 mb-4">
-          <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center;">
+          <div class="card" style="display: flex;justify-content: center;align-content: center;align-items: center; padding: 5px; box-shadow: 5px 5px 8px lightgray; ">
           <img class= "w-100" style="height:220px" src="${event.imageUrl}" alt="">
-            <div class="card-body">
+            <div class="card-body" style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        ">
               <h5 class="card-title">${event.name}</h5>
               <p class="card-text">
                 ${event.description}
@@ -51,11 +57,11 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
               <p>${event.brand} - ${event.price}€</p>
               <a href="./backoffice.html?eventId=${
                 event._id
-              }" class="btn btn-primary">MODIFICA</a>
+              }" class="btn btn-dark">MODIFICA</a>
             </div>
             <a href="./details.html?eventId=${
               event._id
-            }" class="btn btn-primary" id="dettagliButton">DETTAGLI</a>
+            }" class="btn btn-dark" id="dettagliButton">DETTAGLI</a>
           </div>
           </div>
         </div>
@@ -99,7 +105,11 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
 
     if(saveButton !== null){
         saveButton.addEventListener('click', function (e)  {  
-        e.preventDefault();       
+        e.preventDefault();
+        if (!nameInput.value || !descriptionInput.value || !brandInput || !priceInput || !imagineInput.value ) {
+          alert('Per favore, completa tutti i campi');
+          return;
+        }       
         fetch(eventId ? fetchUrl + eventId : fetchUrl, {
         method: eventId ? "PUT" : "POST",
         body: JSON.stringify(new Phone()),
