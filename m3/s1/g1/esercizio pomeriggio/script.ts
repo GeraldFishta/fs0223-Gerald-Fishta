@@ -1,4 +1,4 @@
-console.log("hello world!");
+console.log("prova script");
 
 let numero1:number = 4;
 let numero2:number = 34; 

@@ -1,5 +1,5 @@
 "use strict";
-console.log("hello world!");
+console.log("prova script");
 let numero1 = 4;
 let numero2 = 34;
 let numeroGenerato;
