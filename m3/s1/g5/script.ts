@@ -21,7 +21,7 @@ class SmartPhone implements ISmartPhone {
     numero404():string{return `il tuo credito e ${this.carica}`}
     getNumeroChiamate():number{return this.numeroChiamate}
     chiamata(min:number):void{ this.carica = this.carica - min * this.costoMinuto}
-    azzeraChiamate():void{this.chiamata(0)}
+    azzeraChiamate():void{this.numeroChiamate = 0}
 
     constructor (carica:number, numeroChiamate:number, costoMinuto:number){
             this.carica = carica;
