@@ -31,7 +31,15 @@ class SmartPhone {
             console.log(element);
             console.log(`Questa chiamata ha e la numero ${element.id}`);
             console.log(`Questa chiamata ha ha una durata di ${element.durata}`);
-            console.log(`Questa chiamata e stata effetuata il ${element.dataeOra}`);
+            console.log(`Questa chiamata e stata effetuata il ${element.dataeOra.toLocaleString("it-IT")}`);
+        });
+    }
+    filtraChiamatePerDataOra(element) {
+        console.log(element.toLocaleString("it-IT"));
+        return this.registroChiamate.filter((e) => {
+            if (e.dataeOra.toLocaleDateString("it-IT") == element.toLocaleDateString("it-IT")) {
+                return e;
+            }
         });
     }
     constructor(carica) {
@@ -53,3 +61,4 @@ console.log(MioTelefono.numero404());
 console.log(MioTelefono.getNumeroChiamate());
 MioTelefono.mostraRegistroChiamate();
 console.log(MioTelefono.azzeraChiamate());
+console.log(MioTelefono.filtraChiamatePerDataOra(new Date("2023/05/27")));

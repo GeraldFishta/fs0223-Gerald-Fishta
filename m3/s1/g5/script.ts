@@ -17,6 +17,7 @@ interface IChiamata {
     id:number;
     durata:number;
     dataeOra: Date;
+
 }
 
 interface ISmartPhone {
@@ -41,28 +42,50 @@ class SmartPhone implements ISmartPhone {
 
 
     ricarica($:number):void {this.carica = $ + this.carica}
+
     numero404():string{return `il tuo credito e ${this.carica}`}
+
     getNumeroChiamate():number{return this.numeroChiamate}
-    chiamata(min:number):void{ this.carica = this.carica - min * this.costoMinuto
+
+    chiamata(min:number):void{ 
+        
+        this.carica = this.carica - min * this.costoMinuto
 
         this.numeroChiamate = this.numeroChiamate + 1;
 
         let chiamata:IChiamata = {
             id: this.registroChiamate.length + 1,
             durata: min,  
-            dataeOra: new Date() 
+            dataeOra: new Date()
         }
 
-    this.registroChiamate.push(chiamata)
+        this.registroChiamate.push(chiamata)
     }
+
     azzeraChiamate():void{this.numeroChiamate = 0}
-    mostraRegistroChiamate():void{this.registroChiamate.forEach((element) =>{
+
+    mostraRegistroChiamate():void{this.registroChiamate.forEach((element:IChiamata) =>{
+       
         console.log(element)
+        
         console.log(`Questa chiamata ha e la numero ${element.id}`)
+       
         console.log(`Questa chiamata ha ha una durata di ${element.durata}`)
-        console.log(`Questa chiamata e stata effetuata il ${element.dataeOra}`)
+        
+        console.log(`Questa chiamata e stata effetuata il ${element.dataeOra.toLocaleString("it-IT")}`)
     })
-    
+    }
+
+    filtraChiamatePerDataOra(element: Date):IChiamata[]{
+
+        console.log(element.toLocaleString("it-IT"))
+
+        return this.registroChiamate.filter((e:IChiamata) => {
+
+            if(e.dataeOra.toLocaleString("it-IT") == element.toLocaleString("it-IT")) {
+                return e
+            }
+        }) 
     }
 
     constructor (carica:number){
@@ -87,5 +110,7 @@ console.log(MioTelefono.numero404())
 console.log(MioTelefono.getNumeroChiamate())
 MioTelefono.mostraRegistroChiamate()
 console.log(MioTelefono.azzeraChiamate())
-
+console.log(
+    MioTelefono.filtraChiamatePerDataOra(new Date("2023/05/27"))
+    )
 
