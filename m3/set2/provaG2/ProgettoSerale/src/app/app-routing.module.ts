@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Pages/home/home.component';
 import { ActivePostsComponent } from './Pages/active-posts/active-posts.component';
+import { InactivePostsComponent } from './Pages/inactive-posts/inactive-posts.component';
 
 const routes: Routes = [
 {
@@ -14,7 +15,7 @@ component: HomeComponent,
 },
 {
   path:"inactive-post",
-  component: ActivePostsComponent,
+  component: InactivePostsComponent,
 },
 ];
 
