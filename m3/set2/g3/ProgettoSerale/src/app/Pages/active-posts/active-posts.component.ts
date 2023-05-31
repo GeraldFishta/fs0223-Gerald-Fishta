@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Post } from 'src/app/Modules/post';
 import { PostsService } from 'src/app/posts.service';
 
@@ -18,4 +18,13 @@ constructor(private postSvc: PostsService){
     this.activeArray = post.filter(p => p.active)
   })
 }
+
+@Input() tipo!:Post[];
+
+@Output() onDelete = new EventEmitter();
+
+change(type:string){
+  this.onDelete.emit(type);
+}
+
 }
