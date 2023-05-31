@@ -7,6 +7,7 @@ export class Post {
   public body:string,
   public title:string,
   public active:boolean,
+  public type:string
 
     ) {}
 

@@ -11,13 +11,13 @@ export class InactivePostComponent {
 
   activeArrayPost:Post[] = []
 
-  constructor(private PostSvc: PostService ) {
+    constructor(public PostSvc: PostService ) {
 
-    this.PostSvc.getPosts().then(post =>
-    {
-      this.activeArrayPost = post.filter(p => !p.active)
-    }
-      )
+      this.activeArrayPost = this.PostSvc.getPosts(false)
 
+}
+
+ngOnInit(): void {
+  this.activeArrayPost = this.PostSvc.getPosts(false)
 }
 }
