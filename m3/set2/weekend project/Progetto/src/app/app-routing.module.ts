@@ -5,8 +5,18 @@ import { TodoComponent } from './Pages/todo/todo.component';
 
 const routes: Routes = [
 
-  { path: '', component: TodoComponent },
-  { path: 'completed', component: CompletedComponent }
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: TodoComponent
+  },
+  { path: 'completed',
+   component: CompletedComponent
+  }
 
 ];
 
