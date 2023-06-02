@@ -12,15 +12,18 @@ export class TodosService {
 
 
   getTodos(): Promise<Todo[]> {
+
     return new Promise((resolve) => {
+
       setTimeout(() => {
         fetch(this.apiUrl)
           .then((response) => response.json())
           .then((todos) => {
-            resolve(todos);
-          });
-      }, 2000);
-    });
+            resolve(todos)
+          })
+      }, 2000)
+    })
+
   }
 
   addTodo(todo: Todo): Promise<Todo> {
@@ -40,6 +43,7 @@ export class TodosService {
         })
       }, 2000)
     })
+
   }
 
 
@@ -59,7 +63,31 @@ export class TodosService {
 
       }, 2000)
     })
+
   }
+
+
+
+  updateTodo(todo:Todo): Promise<Todo> {
+
+    return new Promise((resolve) => {
+
+      setTimeout(() =>{
+
+        fetch (`${this.apiUrl}/${todo.id}`,{
+          method: 'PUT',
+          headers: { 'Content-Type': 'application'},
+          body: JSON.stringify(todo)
+        })
+        .then((response) => response.json())
+        .then((updatedTodo) => {
+          resolve(updatedTodo)
+        })
+      }, 2000)
+    })
+
+  }
+
 
 
 
