@@ -21,7 +21,9 @@ export class CompletedComponent implements OnInit {
       ngOnInit() : void {
 
       this.todosService.getTodos().then ((todos) => {
-        this.todos = todos;
+        this.todos = todos.filter((completato) =>{
+          return completato.completed == true
+        });
 
         this.isLoading = false;
 

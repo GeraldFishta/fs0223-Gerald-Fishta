@@ -21,7 +21,9 @@ export class TodoComponent implements OnInit {
       ngOnInit() : void {
 
       this.todosService.getTodos().then ((todos) => {
-        this.todos = todos;
+        this.todos = todos.filter((completato) =>{
+          return completato.completed == false
+        })
 
       this.isLoading = false;
 

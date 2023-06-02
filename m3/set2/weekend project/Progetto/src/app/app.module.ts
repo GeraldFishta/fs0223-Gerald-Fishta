@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './Components/todo/todo.component';
-import { CompletedComponent } from './Components/completed/completed.component';
+import { TodoComponent } from './Pages/todo/todo.component';
+import { CompletedComponent } from './Pages/completed/completed.component';
+import { HeaderComponent } from './Components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    CompletedComponent
+    CompletedComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
