@@ -1,6 +1,0 @@
-{
-"todos": [
-  {"id":1, "title":"studiare", "completed":false},
-  {"id":2, "title":"sport", "completed":true}
-] 
-}
