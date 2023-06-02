@@ -4,6 +4,8 @@ import { Todo } from '../Interfaces/todo';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class TodosService {
 
   public apiUrl= "http://localhost:3000/todos";
@@ -13,25 +15,15 @@ export class TodosService {
 
   getTodos(): Promise<Todo[]> {
 
-    return new Promise((resolve) => {
+    return fetch(this.apiUrl)
+      .then((response) => response.json())
 
-      setTimeout(() => {
-        fetch(this.apiUrl)
-          .then((response) => response.json())
-          .then((todos) => {
-            resolve(todos)
-          })
-      }, 2000)
-    })
+    }
 
-  }
 
   addTodo(todo: Todo): Promise<Todo> {
 
-    return new Promise((resolve)  => {
-
-      setTimeout(() =>{
-        fetch(this.apiUrl, {
+      return fetch(this.apiUrl, {
           method: 'POST',
           headers: {
             'Content-Type' : 'application/json'
@@ -39,57 +31,37 @@ export class TodosService {
           body: JSON.stringify(todo)
         })
         .then((response) => response.json())
-        .then((newTodo) => {resolve(newTodo)
-        })
-      }, 2000)
-    })
 
-  }
+        }
 
 
 
-  removeTodo(id:number): Promise<void> {
+//anche se non previsto dalla consegna ho deciso di aggiungere il metodo per completare la lista CRUD
 
-    return new Promise((resolve) => {
-      setTimeout(() =>{
+  removeTodo(id:number): Promise<Todo> {
 
-        fetch(`${this.apiUrl}/${id}`, {
+       return fetch(`${this.apiUrl}/${id}`, {
         method: 'DELETE'
           })
-        .then(() => {
-          resolve()
-        })
+          .then((response) => response.json())
 
-
-      }, 2000)
-    })
-
-  }
+    }
 
 
 
   updateTodo(todo:Todo): Promise<Todo> {
 
-    return new Promise((resolve) => {
-
-      setTimeout(() =>{
-
-        fetch (`${this.apiUrl}/${todo.id}`,{
+       return fetch (`${this.apiUrl}/${todo.id}`,{
           method: 'PUT',
           headers: { 'Content-Type': 'application'},
           body: JSON.stringify(todo)
         })
         .then((response) => response.json())
-        .then((updatedTodo) => {
-          resolve(updatedTodo)
-        })
-      }, 2000)
-    })
+        }
 
-  }
+
+    }
 
 
 
-
-}
 
