@@ -19,9 +19,7 @@ $your-pink: #020202;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 35vh;
-  font-size: 1.3rem;
-  font-weight: 500;
+  margin-top: 15vh;
 
 }
 
@@ -31,6 +29,8 @@ $your-pink: #020202;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  border: navy solid 2px;
+  padding: 12rem 9rem ;
 
 }
 
