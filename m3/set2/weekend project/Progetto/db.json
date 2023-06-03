@@ -11,18 +11,18 @@
       "id": 3
     },
     {
-      "title": "uscire",
+      "title": "Uscire",
       "completed": true,
       "id": 4
     },
     {
-      "title": "giocare",
+      "title": "Giocare",
       "completed": false,
       "id": 5
     },
     {
-      "title": "programmare",
-      "completed": false,
+      "title": "Programmare",
+      "completed": true,
       "id": 6
     },
     {
@@ -37,13 +37,28 @@
     },
     {
       "title": "Sistemare input",
-      "completed": false,
+      "completed": true,
       "id": 9
     },
     {
       "title": "Brother",
       "completed": false,
       "id": 10
+    },
+    {
+      "title": "Bottone invio ",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "title": "Controllare bottone",
+      "completed": true,
+      "id": 12
+    },
+    {
+      "title": "Task a caso",
+      "completed": true,
+      "id": 13
     }
   ]
 }

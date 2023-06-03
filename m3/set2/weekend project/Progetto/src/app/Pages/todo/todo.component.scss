@@ -1,8 +1,9 @@
 $black: #000000;
 $cornflower-lilac: #ffffff;
-$salmon: #7D098C;
+$salmon: navy;
 $white: #ffffff;
 $your-pink: #020202;
+
 
 
 form {
@@ -39,11 +40,20 @@ form {
 
 li {
   display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+
+img:hover {
+
+  cursor: pointer;
+
 }
 
 .svgelementcheck {
 
-  filter: invert(59%) sepia(59%) saturate(505%) hue-rotate(58deg) brightness(93%) contrast(92%);
+  filter: invert(22%) sepia(65%) saturate(7499%) hue-rotate(100deg) brightness(102%) contrast(103%);
   width: 25px;
   height: 25px;
 
@@ -60,7 +70,7 @@ li {
 
 .svgelementedit {
 
-  filter: invert(7%) sepia(67%) saturate(5105%) hue-rotate(287deg) brightness(153%) contrast(106%);
+  filter: invert(12%) sepia(35%) saturate(5363%) hue-rotate(233deg) brightness(100%) contrast(142%);
   width: 25px;
   height: 25px;
 

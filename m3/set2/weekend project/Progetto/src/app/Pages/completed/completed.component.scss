@@ -1,0 +1,40 @@
+$black: #000000;
+$cornflower-lilac: #ffffff;
+$salmon: navy;
+$white: #ffffff;
+$your-pink: #020202;
+
+
+
+.loadingItems{
+
+  text-align: center;
+  margin-top: 35vh;
+  font-weight: 600;
+
+}
+
+.todoList{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35vh;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+}
+
+.todoListItems{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+li {
+  display: flex;
+  margin-bottom: 0.5rem;
+}

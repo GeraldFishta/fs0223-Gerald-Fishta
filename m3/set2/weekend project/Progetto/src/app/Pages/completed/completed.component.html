@@ -1,18 +1,26 @@
 
-
-<div *ngIf="isLoading">
+<div *ngIf="isLoading" class="loadingItems">
   Recupero Tasks...
 </div>
 
 
 
-<div *ngIf="!isLoading">
+
+
+<div *ngIf="!isLoading" class="todoList">
+
+  <div class="todoListItems">
+
+
 
 <ul>
 
   <li *ngFor="let todo of todos">
-    {{todo.title}}
+   - {{todo.title}}
   </li>
 
 </ul>
+
+</div>
+
 </div>
