@@ -22,14 +22,14 @@ export class EditingComponent implements OnInit {
   ngOnInit(): void {
 
     this.Router.params.subscribe((params:any) => {
-      this.todosService.getSingleTodo(params.id).then(res =>{ this.editingTask = res ; this.isLoading = false })
+    this.todosService.getSingleTodo(params.id).then(res =>{ this.editingTask = res ; this.isLoading = false })
     })
 
   }
 
   editedTask() : void {
-    console.log(this.editingTask);
 
+    console.log(this.editingTask);
     this.todosService.updateTodo(this.editingTask)
 
   }
