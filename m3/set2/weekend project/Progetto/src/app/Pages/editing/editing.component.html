@@ -1,19 +1,37 @@
 
 
-<div *ngIf="isLoading">
+<div *ngIf="isLoading" class="loadingItems">
   Recupero Tasks...
 </div>
 
 
 
-<div *ngIf="!isLoading">
+
+
+<div *ngIf="!isLoading" class="todoList">
+
+  <div class="todoListItems">
+
+
+    <input class="c-checkbox" type="checkbox" id="checkbox">
+    <div class="c-formContainer">
+      <form class="c-form" action="">
+        <input class="c-form__input" placeholder="Write here.." name="formName"  type="text" (keyup.enter)="editedTask()" [(ngModel)]="editingTask.title">
+        <label class="c-form__buttonLabel" for="checkbox">
+          <button class="c-form__button" type="button" (click)="editedTask()" [routerLink]="['/']">Edit</button>
+        </label>
+        <label class="c-form__toggle" for="checkbox" data-title="Edit Task"></label>
+      </form>
+    </div>
+
 
 <form>
-
+<!--
 <input type="text" [(ngModel)]="editingTask.title" name="editor">
-<img src="assets/svg/addsvgcheck.svg" class="editingChecked" (click)= "editedTask()" [routerLink]="['/']">
+<img src="assets/svg/addsvgcheck.svg" class="editingChecked" (click)= "editedTask()" [routerLink]="['/']"> -->
 
 
 </form>
 
+</div>
 </div>
