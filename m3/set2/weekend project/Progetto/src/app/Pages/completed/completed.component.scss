@@ -4,8 +4,6 @@ $salmon: navy;
 $white: #ffffff;
 $your-pink: #020202;
 
-
-
 .loadingItems{
 
   text-align: center;
@@ -25,12 +23,14 @@ $your-pink: #020202;
 
 .todoListItems{
 
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  border: navy solid 2px;
+  border: navy solid 1.5px;
   padding: 12rem 9rem ;
+  background-color: rgba($color: #f3f3f3, $alpha: 0.8);
 
 }
 
