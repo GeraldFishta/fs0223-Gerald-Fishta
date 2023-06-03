@@ -12,8 +12,38 @@
     },
     {
       "title": "uscire",
-      "completed": false,
+      "completed": true,
       "id": 4
+    },
+    {
+      "title": "giocare",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "programmare",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "Bla blaa?",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "title": "Si, bla bla!",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "title": "Sistemare input",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "title": "Brother",
+      "completed": false,
+      "id": 10
     }
   ]
 }
