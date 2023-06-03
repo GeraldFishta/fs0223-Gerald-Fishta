@@ -11,7 +11,7 @@
 <ul>
 
   <li *ngFor="let todo of todos">
-    {{todo.title}}
+    {{todo.title}} <img src="assets/svg/addsvgedit.svg" class="svgelementedit" [routerLink]="['/editing', todo.id ]">  <img src="assets/svg/addsvgcheck.svg" class="svgelementcheck" (click)= "completeTask(todo)">
   </li>
 
 </ul>
@@ -19,7 +19,7 @@
 <form>
 
 <input type="text" name="task" [(ngModel)]="newTask.title">
-<button (click)="addNewTask()">+</button>
+<img src="assets/svg/addsvg.svg" class="svgelement" (click)="addNewTask()">
 
 </form>
 

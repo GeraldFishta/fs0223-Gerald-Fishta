@@ -32,10 +32,32 @@ export class TodoComponent implements OnInit {
     }
 
     addNewTask() : void {
-      this.todosService.addTodo(this.newTask)
-    }
+      this.todosService.addTodo(this.newTask).then(() =>{
 
+        this.todosService.getTodos().then ((todos) => {
+          this.todos = todos.filter((completato) =>{
+            return completato.completed == false
+
+          })
+        })
+      })
+  }
+
+
+  completeTask(completedTask: Todo) : void {
+
+    completedTask.completed = true
+
+    this.todosService.updateTodo(completedTask).then(() => {
+
+      this.todosService.getTodos().then ((todos) => {
+        this.todos = todos.filter((completato) =>{
+          return completato.completed == false
+        })
+      })
+    })
   }
 
 
 
+}

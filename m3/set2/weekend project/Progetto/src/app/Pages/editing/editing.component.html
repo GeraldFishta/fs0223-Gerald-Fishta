@@ -1,0 +1,19 @@
+<p>editing works!</p>
+
+<div *ngIf="isLoading">
+  Recupero Tasks...
+</div>
+
+
+
+<div *ngIf="!isLoading">
+
+<form>
+
+<input type="text" [(ngModel)]="editingTask.title" name="editor">
+<img src="assets/svg/addsvgcheck.svg" class="editingChecked" (click)= "editedTask()" [routerLink]="['/']">
+
+
+</form>
+
+</div>

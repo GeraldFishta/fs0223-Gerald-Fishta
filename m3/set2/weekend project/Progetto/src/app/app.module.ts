@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './Pages/todo/todo.component';
 import { CompletedComponent } from './Pages/completed/completed.component';
 import { HeaderComponent } from './Components/header/header.component';
+import { EditingComponent } from './Pages/editing/editing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     CompletedComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditingComponent
   ],
   imports: [
     BrowserModule,

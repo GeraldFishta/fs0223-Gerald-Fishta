@@ -1,1 +1,19 @@
 <p>completed works!</p>
+
+
+<div *ngIf="isLoading">
+  Recupero Tasks...
+</div>
+
+
+
+<div *ngIf="!isLoading">
+
+<ul>
+
+  <li *ngFor="let todo of todos">
+    {{todo.title}}
+  </li>
+
+</ul>
+</div>

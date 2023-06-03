@@ -13,12 +13,18 @@ export class TodosService {
   constructor() { }
 
 
+  getSingleTodo(id:number): Promise<Todo> {
+
+    return fetch(this.apiUrl + "/" + id ).then((response) => response.json())
+
+  }
+
   getTodos(): Promise<Todo[]> {
 
     return fetch(this.apiUrl)
       .then((response) => response.json())
 
-    }
+  }
 
 
   addTodo(todo: Todo): Promise<Todo> {
@@ -32,7 +38,7 @@ export class TodosService {
         })
         .then((response) => response.json())
 
-      }
+  }
 
 
 
@@ -40,12 +46,12 @@ export class TodosService {
 
   removeTodo(id:number): Promise<Todo> {
 
-       return fetch(`${this.apiUrl}/${id}`, {
+      return fetch(`${this.apiUrl}/${id}`, {
         method: 'DELETE'
           })
           .then((response) => response.json())
 
-    }
+  }
 
 
 
@@ -53,14 +59,17 @@ export class TodosService {
 
        return fetch (`${this.apiUrl}/${todo.id}`,{
           method: 'PUT',
-          headers: { 'Content-Type': 'application'},
+          headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify(todo)
         })
         .then((response) => response.json())
-        }
+
+  }
 
 
-    }
+
+
+}
 
 
 
