@@ -39,3 +39,17 @@ li {
   display: flex;
   margin-bottom: 0.5rem;
 }
+
+.svgelementrash {
+
+  filter: invert(12%) sepia(35%) saturate(5363%) hue-rotate(233deg) brightness(100%) contrast(142%);
+  width: 25px;
+  height: 25px;
+
+}
+
+img:hover {
+
+  cursor: pointer;
+
+}

@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "title": "Passeggiare al parco",
-      "completed": true,
-      "id": 2
-    },
-    {
       "title": "Fare la spesa",
       "completed": true,
       "id": 3
@@ -49,16 +44,6 @@
       "title": "Bottone modificato",
       "completed": false,
       "id": 11
-    },
-    {
-      "title": "Controllare bottone",
-      "completed": true,
-      "id": 12
-    },
-    {
-      "title": "Task a caso",
-      "completed": true,
-      "id": 13
     }
   ]
 }

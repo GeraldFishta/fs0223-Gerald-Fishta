@@ -23,11 +23,25 @@ export class CompletedComponent implements OnInit {
       this.todosService.getTodos().then ((todos) => {
         this.todos = todos.filter((completato) =>{
           return completato.completed == true
-        });
+        })
 
         this.isLoading = false;
 
       })
+
+    }
+
+    deleteThisTask(deleteTask: Todo) : void {
+
+      let taskId = deleteTask.id
+
+      if (taskId) {
+        this.todosService.removeTodo(taskId).then(()=>{
+        this.todos = this.todos.filter((todo) => todo.id !== taskId)
+      })
+     }
+
+
 
     }
 
