@@ -1,0 +1,15 @@
+<p>home works!</p>
+
+
+
+<p>Totale foto preferite : {{likedCard.length}} </p>
+<p>Id delle foto preferite: {{likedCard}}</p>
+
+<div class="card" style="width: 18rem;" *ngFor="let card of cardArray ">
+  <img src="{{card.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{card.title}}</h5>
+    <button type="button" class="btn btn-success me-2" (click)="likeCard(card.id)" >Like</button>
+          <button type="button" class="btn btn-danger" (click)="deleteCard(card.id)" >Elimina</button>
+  </div>
+</div>
