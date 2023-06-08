@@ -47,6 +47,4 @@ export class AuthService {
     return this.http.post<AccessData>(this.apiUrl + '/register', data);
   }
 
-
-
 }

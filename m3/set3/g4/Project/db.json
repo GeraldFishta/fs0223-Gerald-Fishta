@@ -6,6 +6,13 @@
       "name": "tyty",
       "surname": "tyty",
       "id": 1
+    },
+    {
+      "email": "repo@yahu.com",
+      "password": "$2a$10$FV5a1MCKIR6NxwotujbqP.j8gzsE79nUzqsRdx8Y1s1zZRXzGl9IO",
+      "name": "haha",
+      "surname": "hjahja",
+      "id": 2
     }
   ]
 }
