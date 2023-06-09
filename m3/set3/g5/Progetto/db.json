@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "yoyo@gmailyo.com",
+      "password": "$2a$10$9FH8.g/qB8WZO8vT6VO82.CgYMO7/x89qvQtr18tR1p290LZDz9TG",
+      "name": "nokia",
+      "surname": "dede",
+      "id": 1
+    }
+  ]
+}
