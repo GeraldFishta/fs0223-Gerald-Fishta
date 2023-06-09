@@ -28,6 +28,7 @@ export class RegisterComponent {
     this.authSvc.signUp(this.data)
     .subscribe(accessData => {
       alert(accessData.user.name)
+      location.reload()
     })
   }
 

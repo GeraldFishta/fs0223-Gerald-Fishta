@@ -2,10 +2,17 @@
   "users": [
     {
       "email": "yoyo@gmailyo.com",
-      "password": "$2a$10$9FH8.g/qB8WZO8vT6VO82.CgYMO7/x89qvQtr18tR1p290LZDz9TG",
+      "password": "$2a$10$zCL/Z8wGSXsj0yhX99wb.uhZqiESPI5UzxglL38FzAXiWuPzUmtUq",
       "name": "nokia",
-      "surname": "dede",
+      "surname": "tyty",
       "id": 1
+    },
+    {
+      "email": "mailesempio@yahoo.com",
+      "password": "$2a$10$cWDSwlQuKC/CSetWGkFKi.4RQ9HxsxN2yNMtRElpBfLvnHFK85gmm",
+      "name": "nokiawe",
+      "surname": "yosurname",
+      "id": 2
     }
   ]
 }
