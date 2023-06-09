@@ -1,3 +1,10 @@
+<div id="homeDiv">
+
+  <button class="btn btn-primary" [routerLink]="['/']">Go to Home</button>
+
+</div>
+
+
 <div class="container">
   <div class="row">
     <div class="col" *ngFor="let item of usersArray">
@@ -5,8 +12,8 @@
         <div class="card-body">
           <h5 class="card-title">{{item.name + item.surname}}</h5>
           <p class="card-text">{{item.email}}</p>
-          <a (click)="deleteUser(item)" class="btn btn-warning">Delete</a>
-          <a (click)="changeMail(item.email)" class="btn btn-primary">Change</a>
+          <a (click)="deleteUser(item)" class="btn btn-danger">Delete</a>
+          <a (click)="changeMail(item.email)" class="btn btn-warning">Change</a>
         </div>
       </div>
     </div>

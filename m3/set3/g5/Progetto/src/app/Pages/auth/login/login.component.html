@@ -11,7 +11,15 @@
       <label for="floatingPassword">Password</label>
     <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
 
-    <button class="btn btn-primary w-100 py-2" (click)="login()">Login</button>
-    <button class="btn btn-primary w-100 py-2" [routerLink]="['/dashboard']">Dashboard</button>
+    <button class="btn btn-success w-100 py-2" (click)="login()">Login</button>
+    <button class="btn btn-primary w-100 py-2" [routerLink]="['/dashboard']">User details</button>
   </form>
 </main>
+
+
+<div id="homeDiv">
+
+  <button class="btn btn-info" [routerLink]="['/']">Go to Home</button>
+
+</div>
+
